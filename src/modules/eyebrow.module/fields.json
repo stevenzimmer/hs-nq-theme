@@ -1,0 +1,37 @@
+[
+  {
+   "allow_new_line": false,
+   "default": "Receive Regulatory Approval",
+   "display_width": null,
+   "id": "0d2fd81e-75d3-ad05-9c6b-11594baee782",
+   "label": "Text",
+   "locked": false,
+   "name": "text",
+   "required": false,
+   "show_emoji_picker": false,
+   "type": "text",
+   "validation_regex": ""
+  },
+  {
+   "default": {
+    "color": "#BAB78D",
+    "opacity": 100
+   },
+   "display_width": null,
+   "id": "6e91a66e-0e65-b6d3-5a1d-dee043c1d09c",
+   "label": "Dash Color",
+   "locked": false,
+   "name": "dash_color",
+   "required": false,
+   "show_opacity": false,
+   "type": "color"
+  },
+  {
+   "type": "boolean",
+   "id": "1c749500-cacd-d7a5-dad0-8b115261cef4",
+   "default": false,
+   "display": "toggle",
+   "label": "Long Dash?",
+   "name": "long_dash"
+  }
+ ]

@@ -1,0 +1,150 @@
+<!--
+ templateType: section
+ label: Contained Background
+ isAvailableForNewContent: true
+-->
+<!-- Begin partial -->
+{% dnd_section
+ class='contained-background'
+ padding={
+   'top': 0,
+   'bottom': 0
+ },
+ max_width=1140,
+ vertical_alignment='TOP'
+%}
+  
+{% dnd_column
+offset=0,
+width=12,
+background_color="rgba(21, 36, 48, 1)",
+padding={
+  "default" : {
+    "bottom" : "80px",
+    "left" : "100px",
+    "right" : "100px",
+    "top" : "80px"
+  },
+  "mobile" : {
+    "bottom" : "40px",
+    "left" : "20px",
+    "right" : "20px",
+    "top" : "40px"
+  }
+}
+%}
+{% dnd_row %}
+  {% dnd_column
+    offset=0,
+    width=6,
+    padding={
+      "default" : {
+        "top" : "20px"
+      }
+    }
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        offset=0,
+        width=12
+      %}
+        {% module_attribute "html" %}
+          <h2 style="line-height: 1.25;"><span style="color: #ffffff;">Ready to transform to data-driven decision making?</span></h2>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        offset=0,
+        width=12
+      %}
+        {% module_attribute "html" %}
+          <p><span style="color: #ffffff;">Get in touch so we can provide you with a demo based on your specific needs.</span></p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/nquery-theme/cli-build/modules/floating-texture",
+        offset=0,
+        width=12,
+        tso_texture_graphic={
+          "alt" : "Cookie-27",
+          "height" : 141,
+          "loading" : "lazy",
+          "max_height" : 141,
+          "max_width" : 140,
+          "size_type" : "auto_custom_max",
+          "src" : "https://www.statsols.com/hubfs/Cookie-27.svg",
+          "width" : 140
+        },
+        x_axis=90,
+        y_axis=20
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/nquery-theme/cli-build/modules/floating-texture",
+        offset=0,
+        width=12,
+        tso_texture_graphic={
+          "alt" : "Cookie-36",
+          "height" : 141,
+          "loading" : "lazy",
+          "max_height" : 141,
+          "max_width" : 140,
+          "size_type" : "auto_custom_max",
+          "src" : "https://www.statsols.com/hubfs/Cookie-36.svg",
+          "width" : 140
+        },
+        x_axis=-135,
+        y_axis=20
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/nquery-theme/cli-build/modules/floating-texture",
+        offset=0,
+        width=12,
+        tso_texture_graphic={
+          "alt" : "Cookie-13",
+          "height" : 141,
+          "loading" : "lazy",
+          "max_height" : 141,
+          "max_width" : 140,
+          "size_type" : "auto_custom_max",
+          "src" : "https://www.statsols.com/hubfs/Cookie-13.svg",
+          "width" : 140
+        },
+        x_axis=-20,
+        y_axis=20
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=6,
+    width=6
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/form",
+        offset=0,
+        width=12,
+        form={
+          "form_id" : "2b7c5aaf-b7f9-4e6a-8146-3f542d0f9093",
+          "form_type" : "HUBSPOT",
+          "message" : "Thanks for submitting the form.",
+          "response_type" : "inline"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_row %}
+{% end_dnd_column %}
+{% end_dnd_section %}

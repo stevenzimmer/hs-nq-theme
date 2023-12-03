@@ -1,0 +1,13 @@
+<!--
+    templateType: page
+    label: DND Empty
+    isAvailableForNewContent: true
+-->
+{% extends "../layouts/base.html" %}
+
+{% block body %}
+  {% dnd_area "dnd_area" class='dnd-empty', label='Drag and Drop Area' %}
+
+
+  {% end_dnd_area %}
+{% endblock body %}

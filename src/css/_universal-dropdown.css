@@ -1,0 +1,14 @@
+.universal {
+  &-dropdown {
+    &-trigger {
+      &.active {
+        p {
+          @apply text-nq-jade;
+        }
+        .universal-dropdown-caret {
+          @apply rotate-180 stroke-nq-jade;
+        }
+      }
+    }
+  }
+}

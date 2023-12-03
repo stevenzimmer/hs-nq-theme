@@ -1,0 +1,13 @@
+<!-- module html  -->
+<div class="relative">
+<p class="text-[16px]">
+{{ module.text }}</p>
+<div class="absolute -left-2 md:-left-4 top-0 bottom-0 h-full w-[24px] {% if module.long_dash %}
+  md:w-[88px]
+{% else %}
+  md:w-[38px]
+{% endif %}  flex items-center">
+  <div style="background-color: {{ module.dash_color.color }}" class="w-full h-[2px] bg-[#BAB78D] -translate-x-full "></div>
+</div>
+</div>
+

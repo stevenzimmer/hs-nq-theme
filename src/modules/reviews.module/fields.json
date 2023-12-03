@@ -1,0 +1,22 @@
+[
+  {
+   "type": "image",
+   "id": "7db86426-cb77-da92-0c63-0e89fca247ad",
+   "default": {
+    "size_type": "auto",
+    "src": "https://www.statsols.com/hubfs/Master-Images/Page-Images/nquery-vs-other-clinical-trial-software/nQuery-Clinical-Trial-Software.png",
+    "alt": "nQuery-Clinical-Trial-Software",
+    "loading": "lazy",
+    "width": 460,
+    "height": 580,
+    "max_width": 460,
+    "max_height": 580
+   },
+   "resizable": true,
+   "responsive": true,
+   "show_loading": false,
+   "label": "Image",
+   "name": "image",
+   "occurrence": {}
+  }
+ ]

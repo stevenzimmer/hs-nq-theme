@@ -1,0 +1,14 @@
+/* .faq-item.active {
+  bg-grey-100 border-grey-100;
+} */
+
+.faq-item.active .faq-closed {
+    display:none;
+}
+.faq-item.active .faq-open {
+    display:block;
+}
+.faq-item.active .faq-answer {
+    display: block;
+}
+        

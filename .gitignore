@@ -1,0 +1,22 @@
+node_modules
+
+# HubSpot config file
+hubspot.config.yml
+dist
+theme.json
+fields.json
+license.txt
+templates
+sections
+modules
+js
+images
+css
+
+!src/css
+!src/images
+!src/js
+!src/modules
+!src/sections
+!src/templates
+!src/*/**/fields.json

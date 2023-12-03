@@ -1,0 +1,411 @@
+<!--
+  templateType: global_partial
+  label: Main Header
+-->
+{% set universal_applications = [
+  {
+    "title": "Prism",
+    "url": "https://www.graphpad.com/",
+    "logo": "https://cdn.labarchives.com/assets/16.23.0/assets/images/dotmatics/lab-archives/top-bar/PreNav-Logo-Prism.svg",
+    "description": "Statistical analysis and graphing software for scientists"
+  },
+  {
+    "title": "Geneious",
+    "url": "https://www.geneious.com/",
+    "logo": "https://cdn.labarchives.com/assets/16.23.0/assets/images/dotmatics/lab-archives/top-bar/PreNav-Logo-Geneious.svg",
+    "description": "Bioinformatics, cloning, and antibody discovery software"
+  },
+  {
+    "title": "SnapGene",
+    "url": "https://www.snapgene.com/",
+    "logo": "https://cdn.labarchives.com/assets/16.23.0/assets/images/dotmatics/lab-archives/top-bar/PreNav-Logo-SnapGene.svg",
+    "description": "Plan, visualize, & document core molecular biology procedures"
+  },
+  {
+    "title": "LabArchives",
+    "url": "https://www.labarchives.com/",
+    "logo": "https://cdn.labarchives.com/assets/16.23.0/assets/images/dotmatics/lab-archives/top-bar/PreNav-Logo-LabArchives.svg",
+    "description": "Electronic Lab Notebook to organize, search and share data"
+  },
+  {
+    "title": "Protein Metrics",
+    "url": "https://proteinmetrics.com/",
+    "logo": "https://cdn.labarchives.com/assets/16.23.0/assets/images/dotmatics/lab-archives/top-bar/PreNav-Logo-Protein-Metrics.svg",
+    "description": "Proteomics software for analysis of mass spec data"
+  },
+  {
+    "title": "OMIQ",
+    "url": "https://www.omiq.ai/",
+    "logo": "https://cdn.labarchives.com/assets/16.23.0/assets/images/dotmatics/lab-archives/top-bar/PreNav-Logo-OMIQ.svg",
+    "description": "Modern cytometry analysis platform"
+  },
+  {
+    "title": "FCS Express",
+    "url": "https://denovosoftware.com/",
+    "logo": "https://cdn.labarchives.com/assets/16.23.0/assets/images/dotmatics/lab-archives/top-bar/PreNav-Logo-FCS-Express.svg",
+    "description": "Analysis, statistics, graphing and reporting of flow cytometry data"
+  },
+  {
+    "title": "nQuery",
+    "url": "https://www.statsols.com/",
+    "logo": "https://cdn.labarchives.com/assets/16.23.0/assets/images/dotmatics/lab-archives/top-bar/PreNav-Logo-nQuery.svg",
+    "description": "Software to optimize designs of clinical trials"
+  }
+] %}
+{% set nav_items = [
+  {
+    "title": "nQuery",
+    "url": "#",
+    "columns": [
+      {
+        "label": "Solutions",
+        "items": [
+          {
+            "title": "Classical Statistics",
+            "description": "Solutions for Frequentist & Fixed-term trials",
+            "url": "#"
+          },
+          {
+            "title": "Bayesian Statistics",
+            "description": "Sample size using Bayesian analysis",
+            "url": "#"
+
+          },
+          {
+            "title": "Adaptive Trials",
+            "description": "Sample size for sophisticatedAdaptive clinical trials",
+            "url": "#"
+
+          },
+          {
+            "title": "Trial Prediction",
+            "description": "Accurately predict your key trial milestones",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "label": "Software",
+        "items": [
+          {
+            "title": "About nQuery",
+            "url": "#"
+
+          },
+          {
+            "title": "What's New",
+            "url": "#"
+
+          },
+          {
+            "title": "Procedures",
+            "url": "#"
+
+          },
+          {
+            "title": "Templates",
+            "url": "#"
+
+          }
+        ]
+      }
+    ]
+
+  },
+  {
+    "title": "Customers",
+    "url": "#"
+  },
+  {
+    "title": "Resources",
+    "url": "#",
+    "columns": [
+      {
+        "label": "Learn",
+        "items": [
+          {
+            "title": "Trial Design Templates",
+            "url": "#"
+
+          },
+          {
+            "title": "Training Webinars",
+            "url": "#"
+
+          },
+          {
+            "title": "Sample Size Examples",
+            "url": "#"
+
+          },
+          {
+            "title": "All Resources",
+            "url": "#"
+
+          },
+          {
+            "title": "Knowledge Base",
+            "url": "#"
+
+          }
+        ]
+      }
+    ],
+    "box": {
+      "title": "Sample Size Resource Center",
+      "description": "Improve your knowledge and calculation of sample size",
+      "link": {
+        "title": "Explore Resource Center",
+        "url": "#"
+      }
+    }
+
+  },
+  {
+    "title": "Contact",
+    "url": "#",
+    "columns": [
+      {
+        "label": "support",
+        "items": [
+          {
+            "title": "Licensing Support",
+            "url": "#"
+          },
+          {
+            "title": "Technical Support",
+            "url": "#"
+          },
+          {
+            "title": "Login to Support",
+            "url": "#"
+          },
+          {
+            "title": "Submit Support Ticket",
+            "url": "#"
+          }
+        ]
+      }
+    ],
+    "box": {
+      "title": "Knowledge Base",
+      "description": "Access your support & learning lab with tutorials and tips to optimize your clinical trial design.",
+      "link": {
+        "title": "Explore Help Center",
+        "url": "#"
+      }
+    }
+  }
+] %}
+<div class="bg-nq-forest  hidden lg:block relative">
+  <div class="container px-6 py-[12px]">
+    <div class="flex items-center">
+      <div class="lg:w-[200px]">
+        <a target="_blank" href="https://www.dotmatics.com/">
+          <svg width="101" height="16" viewBox="0 0 101 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.5625 10.232C14.5625 7.00104 17.136 4.44229 20.3886 4.44229C23.6177 4.44229 26.2148 6.99974 26.2148 10.232C26.2148 13.4631 23.6177 15.9984 20.3886 15.9984C17.1373 15.9984 14.5625 13.4631 14.5625 10.232ZM20.3886 13.6871C22.2621 13.6871 23.7527 12.1837 23.7527 10.232C23.7527 8.25696 22.2621 6.7535 20.3886 6.7535C18.4693 6.7535 17.0246 8.25696 17.0246 10.232C17.0246 12.2071 18.4693 13.6871 20.3886 13.6871Z" fill="white"/>
+            <path d="M26.7891 4.73413H28.8893V1.81711H31.396V4.73413H34.3536V6.91116H31.396V11.8476C31.396 12.9693 31.961 13.5308 33.0216 13.5308H34.3536V15.7078H32.7057C30.1767 15.7078 28.8893 14.5405 28.8893 12.0274V6.91116H26.7891V4.73413Z" fill="white"/>
+            <path d="M36.3841 4.73394H39.0717V5.72148C39.975 4.80169 41.1719 4.44211 42.1198 4.44211C43.52 4.44211 44.671 5.09222 45.3711 6.16965C46.2521 5.07007 47.7191 4.44211 49.2543 4.44211C51.761 4.44211 53.3866 6.14751 53.3866 8.86259V15.7063H50.88V9.44626C50.88 7.78516 50.0449 6.75332 48.6224 6.75332C47.3809 6.75332 46.138 7.60537 46.138 9.46841V15.7063H43.6314V9.44626C43.6314 7.76301 42.7504 6.75332 41.2834 6.75332C40.0418 6.75332 38.8895 7.65097 38.8895 9.6482V15.7063H36.3828V4.73394H36.3841Z" fill="white"/>
+            <path d="M55.0117 12.6336C55.0117 10.4801 56.8183 8.97659 60.2046 8.97659H62.1921V8.70691C62.1921 7.33764 61.357 6.48559 59.9346 6.48559C58.7153 6.48559 57.6993 7.24904 57.6088 8.37078H55.1022C55.2149 6.05957 57.2247 4.44406 59.9791 4.44406C62.9145 4.44406 64.7211 6.21721 64.7211 8.9323V15.7083H62.2603V14.5644C61.5379 15.4165 60.3187 16.0001 59.1217 16.0001C56.6374 16.0001 55.0117 14.6765 55.0117 12.6349V12.6336ZM59.3249 14.0472C60.9729 14.0472 62.2603 12.7235 62.2603 10.996V10.8162H60.2728C58.4439 10.8162 57.4725 11.422 57.4725 12.5659C57.4725 13.4414 58.128 14.0472 59.3236 14.0472H59.3249Z" fill="white"/>
+            <path d="M65.8516 4.73413H67.9518V1.81711H70.4585V4.73413H73.4161V6.91116H70.4585V11.8476C70.4585 12.9693 71.0235 13.5308 72.0841 13.5308H73.4161V15.7078H71.7682C69.2392 15.7078 67.9518 14.5405 67.9518 12.0274V6.91116H65.8516V4.73413Z" fill="white"/>
+            <path d="M74.9023 0.0221863H77.5663V2.78157H74.9023V0.0221863ZM77.4995 4.7345V15.7069H74.9928V4.7345H77.4995Z" fill="white"/>
+            <path d="M79.2148 10.2319C79.2148 6.93311 81.7661 4.44211 84.9951 4.44211C87.6591 4.44211 89.9179 6.2374 90.2562 8.66066H87.705C87.4559 7.60667 86.2825 6.77547 84.9505 6.77547C83.0994 6.77547 81.6769 8.23463 81.6769 10.2306C81.6769 12.2056 83.0994 13.6635 84.9505 13.6635C86.2825 13.6635 87.4572 12.8558 87.7272 11.6884H90.2562C89.9625 14.2459 87.6827 15.9969 84.9951 15.9969C81.7661 15.9969 79.2148 13.528 79.2148 10.2306V10.2319Z" fill="white"/>
+            <path d="M91.6328 12.3411H94.0267C94.1172 13.3508 94.9523 14.0465 96.2174 14.0465C97.4589 14.0465 98.1813 13.4407 98.1813 12.633C98.1813 10.2996 91.836 11.9373 91.836 7.8529C91.836 5.78793 93.5744 4.44211 95.9683 4.44211C98.3845 4.44211 100.191 5.60944 100.417 7.80731H97.9558C97.8208 6.97741 97.0302 6.32599 95.946 6.32599C95.0205 6.32599 94.1853 6.72987 94.1853 7.60537C94.1853 9.78239 100.621 8.07699 100.621 12.3398C100.621 14.4934 98.8145 15.9969 96.2174 15.9969C93.6203 15.9969 91.815 14.651 91.6341 12.3398L91.6328 12.3411Z" fill="white"/>
+            <path d="M5.70073 -9.15527e-05H0.507812V2.49221L5.85936 2.48961C8.77242 2.48961 10.8727 4.77867 10.8727 7.78559C10.8727 10.8824 8.75014 13.2158 5.85936 13.2158H3.1495V10.4017H0.507812V15.7068H5.70073C10.2617 15.7068 13.5812 12.3403 13.5812 7.78559C13.5812 3.32081 10.2617 -9.15527e-05 5.70073 -9.15527e-05Z" fill="white"/>
+            <path d="M3.14693 5.12531H0.5V7.75571H3.14693V5.12531Z" fill="white"/>
+          </svg>
+        </a>  
+      </div>
+      <div class="flex items-center group cursor-pointer universal-dropdown-trigger" id="universal-dropdown-trigger">
+        <div>
+          <p class="text-white text-[14px] group-hover:text-nq-jade">
+            Explore the Scientific R&D Platform
+          </p>
+        </div>
+        <div class="px-2">
+          <svg class="group-hover:text-nq-jade text-white duration-200 transition-transform origin-center universal-dropdown-caret" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" >
+            <path d="M4.62109 6L8.62109 10L12.6211 6"  stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+          </svg>
+            
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="absolute left-0 right-0 bg-nq-forest z-20 hidden" id="universal-dropdown">
+    <div class="container px-6">
+      <div class=" py-[30px]">
+        <div class="lg:w-2/3 mb-12">
+          <p class="text-white font-bold text-[18px] mb-[15px]">An open portfolio of interoperable, industry leading products</p>
+          <p class="text-[14px] text-white mb-[32px]">The Dotmatics digital science platform provides the first true end-to-end solution for scientific R&amp;D, combining an enterprise data platform with the most widely used applications for data analysis, biologics, flow cytometry, chemicals innovation, and more.</p>
+          <div class="mb-6">
+            <a target="_blank" href="https://www.dotmatics.com/platform" class="btn border-2 border-nq-jade text-white">Explore the platform</a>
+          </div>
+
+        </div>
+
+        <p class="text-white font-bold mb-6">Explore the Applications</p>
+
+        <div class="flex flex-wrap items-stretch -mx-6">
+          {% for item in universal_applications %}
+          <div class="lg:w-1/4 px-6 py-3">
+            <a target="_blank" href="{{item.url}}" class="px-[16px] py-[24px] hover:border-nq-jade border border-transparent rounded-[6px] block h-full">
+            
+              <div class="mb-[12px]">
+                <img class="w-auto h-auto max-w-full max-h-full" src="{{item.logo}}" alt="{{item.title}} logo"  >
+              </div>
+              <div>
+                <p class="text-white text-[14px]">
+                  {{item.description}}
+                </p>
+              </div>
+              
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="bg-white relative z-10 main-nav">
+  <div class="container px-6">
+    <div class="flex items-center">
+      <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6">
+        <div class="w-full py-3 lg:py-0">
+          {% module "header_logo" path="@hubspot/logo", link="https://www.statsols.com/" label="Header logo", img={src= "https://www.statsols.com/hubfs/nquery-logo-dark.png", width= 163, override_inherited_src=true, alt="nQuery Logo" } %}
+        </div>
+      </div>
+      
+      <div class="w-1/2 sm:w-2/3 md:w-3/4 lg:w-5/6">
+        <div class="lg:hidden flex justify-end">
+          <div id="mobile-nav-trigger" class="cursor-pointer pr-4">
+            <div id="mobile-nav-close" class="hidden">
+              <svg class="w-[30px]"  stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#000" stroke-width="2" d="M3,3 L21,21 M3,21 L21,3"></path></svg>
+            </div>
+
+            <div id="mobile-nav-open">
+              <svg class="w-[30px]" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"  xmlns="http://www.w3.org/2000/svg"><path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path></svg>
+            </div>
+          </div>
+        </div>
+        <div class="w-full hidden lg:flex flex-col lg:flex-row items-center absolute lg:static right-0 bg-white lg:top-[100px] lg:bg-transparent main-nav-menu pb-32 lg:pb-0 overflow-y-scroll lg:overflow-visible h-screen lg:h-full  " id="main-nav-menu">
+          <div class="px-6 lg:px-0 w-full lg:w-2/3 mb-6 lg:mb-0 py-6 lg:py-0">
+            
+            <ul class="flex flex-col lg:flex-row  lg:items-center lg:justify-center lg:space-x-6 pl-0 list-none">
+            
+              {% for item in nav_items %}
+              
+              <li class="group m-0">
+                <div class="flex items-center relative">
+                  <a href="{{item.url}}" class="text-nq-forest lg:group-hover:text-nq-jade text-[16px] block py-3 lg:py-6 menu-item before:absolute before:bottom-[2px] before:left-0 before:w-full before:h-[2px] before:invisible before:scale-x-0 before:transition-all before:duration-200 before:ease-in-out before:origin-bottom before:content-[' '] lg:group-hover:before:visible lg:group-hover:before:scale-x-100 lg:group-hover:before:bg-nq-jade">
+                    {{item.title}}
+                  </a>
+                  <div class="px-1">
+                  {% if item.columns %}
+
+                    <svg class="origin-center duration-200 ease-in-out lg:group-hover:rotate-180 transition-transform" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 6L8 10L12 6" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
+                      </svg>    
+                  {% endif %}                  
+                  </div>
+                </div>
+
+                {% if item.columns %}
+              
+                <div class="relative lg:absolute left-0  w-full px-6 lg:p-6 bg-white z-10 lg:hidden group-hover:block">
+                  <div class="container lg:px-6">
+
+                    <div class="flex flex-wrap py-3">
+                      <div class="w-full lg:w-1/3"></div>
+                      <div class="w-full lg:w-2/3">
+                        <div class="flex flex-wrap">
+                          {% for col in item.columns %}
+                          <div class="w-full lg:w-1/2 mb-6 lg:mb-0">
+                            
+                            <div>
+                              <div class="mb-3">
+                                <p class="uppercase text-[12px] text-black/50 font-semibold">{{col.label}}</p>
+                                
+                              </div>
+                              <div>
+              
+                              {% for item in col.items %}
+                                <a href="{{item.url}}" class="mb-3 relative group/menu-item block">
+                              
+                                  <div>
+                                    <p class="text-nq-forest group-hover/menu-item:text-nq-jade text-[16px]">
+                                      {{item.title}}
+                                    </p>
+                                  </div>
+                                  <div>
+                                    <p class="text-black/60 text-[12px] group-hover/menu-item:text-black">{{item.description}}</p>
+                                    
+                                  </div>
+                                  
+                                </a>
+                              {% endfor %}
+              
+              
+                              </div>
+                              
+                            </div>
+                            
+                          </div>
+              
+                          {% endfor %}
+                          {% if item.box %}
+                          <div class="w-full lg:w-1/2">
+                            
+                            <div class="bg-[#F3F3EF] p-[32px] rounded-[6px] relative">
+                              <div class="">
+                                <div class="mb-[16px]">
+                                  <p class="text-[18px] text-nq-forest font-semibold">
+                                    {{item.box.title}}
+                                  </p>
+                                  
+                                </div>
+                                <div class="mb-[64px]">
+                                  <p class="text-[14px] text-nq-forest">
+                                    {{item.box.description}}
+                                  </p>
+                                </div>
+                                
+                              </div>
+                              <div class="absolute left-[32px] bottom-[32px]">
+                                <a href="{{item.box.link.url}}" class="text-[#36AE8A] text-[14px]">{{item.box.link.title}} ></a>
+                              </div>
+                              
+                            </div>
+                            
+                          </div>
+                          {% endif %}
+              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+        
+          </div>
+          <div class="w-full lg:w-1/3">
+            <div class="flex items-center lg:justify-end w-full space-x-4 px-6 lg:px-0">
+              <div>
+                <a href="#" class="btn border-nq-jade text-[16px] text-nq-forest hover:text-nq-forest hover:bg-nq-jade">Pricing</a>
+              </div>
+
+              <div>
+                <a href="#" class="btn border-nq-jade text-[16px] text-nq-forest bg-nq-jade hover:text-nq-forest hover:bg-nq-jade/80">Try Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

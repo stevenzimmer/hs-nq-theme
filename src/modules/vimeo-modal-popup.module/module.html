@@ -1,0 +1,41 @@
+<!-- module html  -->
+{{ require_js("https://unpkg.com/micromodal/dist/micromodal.min.js") }}
+{{ require_js("https://player.vimeo.com/api/player.js") }}
+
+{% if module.unique_id %}
+<div data-modal-open="{{ module.unique_id }}" class="cursor-pointer relative ">
+  {% if module.image.src %}
+	{% set sizeAttrs = 'width="{{ module.image.width }}" height="{{ module.image.height }}"' %}
+	{% if module.image.size_type == 'auto' %}
+		{% set sizeAttrs = 'width="{{ module.image.width }}" height="{{ module.image.height }}" style="max-width: 100%; height: auto;"' %}
+	{% elif module.image.size_type == 'auto_custom_max' %}
+		{% set sizeAttrs = 'width="{{ module.image.max_width }}" height="{{ module.image.max_height }}" style="max-width: 100%; height: auto;"' %}
+	{% endif %}
+	 {% set loadingAttr = module.image.loading != 'disabled' ? 'loading="{{ module.image.loading }}"' : '' %}
+	<img src="{{ module.image.src }}" alt="{{ module.image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+{% endif %}
+</div>
+<div class="modal micromodal-slide" id="{{ module.unique_id }}" aria-hidden="true">
+	<div class="modal__overlay fixed inset-0 bg-black/80 flex items-center justify-center z-50" tabindex="-1" data-modal-close="{{ module.unique_id }}">
+		<div class="modal__container relative container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+			<div class="absolute -right-10 -top-10">
+			
+				<button class="modal__close text-white text-lg" aria-label="Close modal" data-modal-close="{{ module.unique_id }}"></button>
+			</div>
+
+			<div >
+				<iframe class="w-full aspect-video" scrolling="no" allow="autoplay" frameborder="0" src="https://player.vimeo.com/video/{{ module.vimeo_id }}?playsinline=0" allowfullscreen="true"></iframe>
+			</div>
+
+		</div>
+	</div>
+</div>
+{% else %}
+	<div class="w-full p-12 bg-slate-200">
+		<div class="text-center">
+			<p class="text-2xl font-bold">Vimeo Modal Popup</p>
+			<p class="text-sm">Please add a unique id to the module settings</p>
+		</div>
+	</div>
+
+{% endif %}

@@ -1,0 +1,41 @@
+[
+  {
+   "type": "group",
+   "id": "97988e0b-d632-69f3-5799-2cb960e44bfd",
+   "label": "Testimonial Panel",
+   "children": [
+    {
+     "default": "<p style=\"font-size: 23px;\">\"I have been a user of nQuery software since the late 90's for sample size calculations in clinical trials.</p>\n<p style=\"font-size: 23px;\">For the last 14 years nQuery has been a standard product in our toolkit.\"</p>\n<p style=\"font-size: 18px; margin-bottom: 5px;\">Michael DiGruccio</p>\n<p style=\"font-size: 18px; margin-top: 0;\">Merck</p>",
+     "display_width": null,
+     "id": "text",
+     "label": "Rich text field",
+     "locked": false,
+     "name": "text",
+     "required": false,
+     "type": "richtext"
+    },
+    {
+     "type": "image",
+     "id": "49880bc5-3ea6-51cb-3899-689ac34eb17d",
+     "default": {
+      "size_type": "auto",
+      "src": "https://www.statsols.com/hubfs/merck-logo-white.png",
+      "alt": "merck-logo-white",
+      "loading": "lazy",
+      "width": 322,
+      "height": 96,
+      "max_width": 322,
+      "max_height": 96
+     },
+     "resizable": true,
+     "responsive": true,
+     "show_loading": false,
+     "label": "Logo",
+     "name": "logo"
+    }
+   ],
+   "name": "testimonial_panel",
+   "default": [],
+   "occurrence": {}
+  }
+ ]

@@ -1,0 +1,23 @@
+.btn {
+    @apply px-[24px] py-[8px] rounded-full font-medium border-2 no-underline hover:no-underline inline-block transition duration-200;
+
+    &-lg {
+        @apply px-[40px] py-[16px];
+    }
+
+    &-primary {
+        @apply border-nq-jade bg-nq-jade text-nq-forest hover:text-nq-forest hover:bg-nq-jade/80 font-medium;
+    }
+
+}
+
+/* .hs_cos_wrapper_widget {
+    .hs-button {
+        @apply hover:scale-105;
+    }
+} */
+@media(max-width: 767px) {
+.button {
+    @apply text-[18px] px-[32px] py-[12px] !important;
+}
+}

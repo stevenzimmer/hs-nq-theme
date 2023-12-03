@@ -1,0 +1,29 @@
+@tailwind base;
+@layer base {
+    html {
+        @apply overflow-x-hidden;
+    }
+
+    ul {
+        @apply list-disc pl-6;
+    }
+    ol {
+        @apply list-decimal pl-6;
+    }
+
+    ul,ol {
+        li {
+            @apply mb-2 text-nq-primary leading-relaxed;
+        }
+    }
+
+    h1 {
+        @apply leading-tight;
+    }
+
+    h2,h3,p {
+
+    }
+}
+@tailwind components;
+@tailwind utilities;

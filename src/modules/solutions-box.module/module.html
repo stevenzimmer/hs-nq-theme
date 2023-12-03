@@ -1,0 +1,15 @@
+<!-- module html  -->
+{% set href = module.link.url.href %}
+{% if module.link.url.type is equalto "EMAIL_ADDRESS" %}
+	{% set href = "mailto:" + href %}
+{% endif %}
+<a href="{{ href }}"
+{% if module.link.open_in_new_tab %}target="_blank"{% endif %}
+{% if module.link.rel %}rel="{{ module.link.rel }}"{% endif %} class="border-l border-[#BAC0B8] p-[24px] block hover:bg-white hover:border-nq-jade group">
+  <p class="text-[23px] group-hover:text-nq-jade mb-[8px]">
+    {{ module.title }}
+  </p>
+  <p class="text-[18px] text-nq-primary">
+    {{ module.description }}
+  </p>
+</a>

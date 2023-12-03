@@ -1,0 +1,15 @@
+.main-nav-menu {
+  &.active {
+    @apply flex;
+  }
+}
+
+body.mobile-open {
+  @apply overflow-hidden lg:overflow-auto;
+}
+
+.sub-menu .child-dropdown {
+  &.active {
+    @apply block lg:hidden;
+  }
+}

@@ -1,0 +1,39 @@
+[
+  {
+   "type": "text",
+   "id": "bdf986f7-1c27-f9e5-f313-05501ab3db89",
+   "validation_regex": "",
+   "label": "Title",
+   "name": "title",
+   "default": "Classical Statistics"
+  },
+  {
+   "type": "text",
+   "id": "a76d1194-9591-447d-91aa-580ea6524f1e",
+   "validation_regex": "",
+   "label": "Description",
+   "name": "description",
+   "default": "Solutions for Frequentist & Fixed-term trials"
+  },
+  {
+   "type": "link",
+   "id": "00404ac0-0a4e-9d33-214f-83047aa6ea1d",
+   "default": {
+    "url": {
+     "content_id": null,
+     "type": "EXTERNAL",
+     "href": ""
+    },
+    "open_in_new_tab": false,
+    "no_follow": false
+   },
+   "supported_types": [
+    "EXTERNAL",
+    "CONTENT",
+    "EMAIL_ADDRESS",
+    "BLOG"
+   ],
+   "label": "Link",
+   "name": "link"
+  }
+ ]

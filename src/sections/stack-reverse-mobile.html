@@ -1,0 +1,100 @@
+<!--
+ templateType: section
+ label: Stack Reverse section
+ isAvailableForNewContent: true
+ screenshotPath: ../images/stack-reverse.png
+-->
+<!-- Begin partial -->
+{% dnd_section
+  class="stack-reverse"
+  padding={
+    "default" : {
+      "bottom" : "40px",
+      "top" : "40px"
+    },
+    "mobile" : {
+      "left" : "40px",
+      "right" : "40px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=5,
+    margin={
+      "mobile" : {
+        "bottom" : "20px"
+      }
+    }
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/nquery-theme/cli-build/modules/eyebrow",
+        offset=0,
+        width=12,
+        text="Bayesian Statistics"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        offset=0,
+        width=12
+      %}
+        {% module_attribute "html" %}
+          <h3>Integrate prior information, real-world data &amp; expert opinions</h3>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/rich_text",
+        offset=0,
+        width=12
+      %}
+        {% module_attribute "html" %}
+          <ul>
+          <li>Bayesian assurance - the true probability of success</li>
+          <li>Communicate complex findings to non-statisticians</li>
+          <li>Identify study design threats &amp; opportunities</li>
+          </ul>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/nquery-theme/cli-build/modules/section-cta",
+        offset=0,
+        width=12
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=5,
+    width=7
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="@hubspot/linked_image",
+        offset=0,
+        width=12,
+        horizontal_alignment="CENTER",
+        img={
+          "alt" : "integrate-prior-information",
+          "height" : 910,
+          "loading" : "lazy",
+          "max_height" : 910,
+          "max_width" : 1569,
+          "size_type" : "auto",
+          "src" : "https://www.statsols.com/hubfs/integrate-prior-information.png",
+          "width" : 1569
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+
+{% end_dnd_section %}
+<!-- End partial -->

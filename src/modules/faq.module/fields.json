@@ -1,0 +1,20 @@
+[
+  {
+   "type": "text",
+   "id": "a32d13b5-a187-d68d-3bb3-46eade51b478",
+   "validation_regex": "",
+   "label": "Question",
+   "name": "question",
+   "default": "What is nQuery Adapt?"
+  },
+  {
+   "default": "<p>nQuery Adapt is the powerful adaptive module of the nQuery platform for clinical trial design.</p>\n<p>nQuery has 1000+ validated statistical procedures covering Adaptive, Bayesian and classical clinical trial designs.</p>\n<p>Browse the <a href=\"https://www.statsols.com/nquery-case-study/optimize-clinical-trials\" rel=\"noopener\">tables for the Adaptive module in nQuery here</a>.</p>",
+   "display_width": null,
+   "id": "text",
+   "label": "Answer",
+   "locked": false,
+   "name": "answer",
+   "required": false,
+   "type": "richtext"
+  }
+ ]

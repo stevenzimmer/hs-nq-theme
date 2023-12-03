@@ -1,0 +1,53 @@
+{% set href = module.card_cta.link.url.href %}
+{% if module.card_cta.link.url.type is equalto "EMAIL_ADDRESS" %}
+  {% set href = "mailto:" + href %}
+{% endif %}
+
+<div class="overflow-hidden border border-[#DBDFD4] relative max-w-[380px] mx-auto">
+  <a href="{{ href }}"
+    {% if module.card_cta.link.open_in_new_tab %}target="_blank"{% endif %}
+    {% if module.card_btn.link.rel %}rel="{{ module.card_cta.link.rel }}"{% endif %} class="block group hover:no-underline">
+    <div class="md:h-[200px]">
+      {% if module.card_thumbnail.src %}
+      {% set sizeAttrs = 'width="{{ module.card_thumbnail.width }}" height="{{ module.card_thumbnail.height }}"' %}
+      {% if module.card_thumbnail.size_type == 'auto' %}
+        {% set sizeAttrs = 'width="{{ module.card_thumbnail.width }}" height="{{ module.card_thumbnail.height }}" style="max-width: 100%; height: auto;"' %}
+      {% elif module.card_thumbnail.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ module.card_thumbnail.max_width }}" height="{{ module.card_thumbnail.max_height }}" style="max-width: 100%; height: auto;"' %}
+      {% endif %}
+        {% set loadingAttr = module.card_thumbnail.loading != 'disabled' ? 'loading="{{ module.card_thumbnail.loading }}"' : '' %}
+      <img class="w-full h-full object-cover" src="{{ module.card_thumbnail.src }}" alt="{{ module.card_thumbnail.alt }}" {{ loadingAttr }}>
+      {% endif %}
+
+    </div>
+    <div class="p-[24px] bg-white relative">
+      {% if module.card_label %}
+      <div class="mb-3">
+        <p class="m-0 text-[12px] text-nq-forest font-semibold bg-[#DBDFD4] px-[8px] py-[4px] inline-block">{{ module.card_label }}</p>
+      </div>
+      {% endif %}
+      <div class="mb-[12px] h-12">
+        <p class="text-[16px] font-semibold text-nq-forest max-lines max-lines-2 leading-normal">
+          {{ module.card_title }}
+        </p>
+      </div>
+      {% if module.description %}
+      <div class="mb-[12px]">
+        <p class="text-[14px]  text-nq-primary leading-normal max-lines max-lines-2 ">
+          {{ module.description }}
+        </p>
+      </div>
+      {% endif %}
+      <div class="flex items-center">
+        <div class="">
+          <p class="text-[16px] font-semibold text-nq-forest m-0 ">{{ module.card_cta.text }}</p>
+        </div>
+        <div class="px-1"><svg class="group-hover:translate-x-0.5 transition-transform duration-200" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.5 4L10.5 8L6.5 12" stroke="#2EC99B" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    
+    </div>
+  </a>
+</div>

@@ -1,0 +1,52 @@
+.slider-container .nboslick-arrow.nboslick-next {
+  right: 0;
+  display:flex!important;
+  align-items:center;
+  justify-content:center;
+}
+
+.slider-container .nboslick-arrow.nboslick-prev {
+  left: 0;
+  
+}
+
+.slider-container .nboslick-arrow {
+  padding: 0;
+}
+
+.nboslick-list.draggable {
+  padding:0!important;
+} 
+
+.slick-container .slick-slide {
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.slick-container .slick-center {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.slick-container .slick-prev,
+.slick-container .slick-prev:hover,
+.slick-container .slick-prev:focus {background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23BAC0B8' viewBox='0 0 16 28'%3E%3Cpath d='M12.2676 27.4834L0.830078 15.5459C0.517578 15.1709 0.392578 14.7959 0.392578 14.4209C0.392578 14.1084 0.517578 13.7334 0.767578 13.4209L12.2051 1.4834C12.7676 0.858398 13.7676 0.858398 14.3301 1.4209C14.9551 1.9834 14.9551 2.9209 14.3926 3.5459L3.95508 14.4209L14.4551 25.4209C15.0176 25.9834 15.0176 26.9834 14.3926 27.5459C13.8301 28.1084 12.8301 28.1084 12.2676 27.4834Z' color='%23BAC0B8' font-family='sans-serif' font-weight='400' overflow='visible' style='line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:%23BAC0B8;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal'/%3E%3C/svg%3E");
+background-repeat: no-repeat;
+}
+
+.slick-container .slick-next,
+.slick-container .slick-next:hover,
+.slick-container .slick-next:focus {background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23BAC0B8' viewBox='0 0 16 28'%3E%3Cpath d='M3.66992 1.4209L15.1074 13.3584C15.3574 13.6709 15.5449 14.0459 15.5449 14.4209C15.5449 14.7959 15.3574 15.1709 15.1074 15.4209L3.66992 27.3584C3.10742 27.9834 2.10742 27.9834 1.54492 27.4209C0.919922 26.8584 0.919922 25.9209 1.48242 25.2959L11.9824 14.3584L1.48242 3.4834C0.919922 2.9209 0.919922 1.9209 1.54492 1.3584C2.10742 0.795898 3.10742 0.795898 3.66992 1.4209Z' color='%23BAC0B8' font-family='sans-serif' font-weight='400' overflow='visible' style='line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:%23333c4e;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal'/%3E%3C/svg%3E");
+background-repeat: no-repeat;
+}
+
+.slick-prev:before, .slick-next:before {
+    display: none;
+}
+
+.slick-arrow:hover,
+.slick-arrow:focus {
+  border:none;
+}

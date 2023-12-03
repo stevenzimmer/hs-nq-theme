@@ -1,0 +1,74 @@
+[
+  {
+   "type": "group",
+   "id": "9f708928-d58c-f602-bd30-13e5d1cb338b",
+   "label": "Customer Info",
+   "children": [
+    {
+     "type": "text",
+     "id": "ad8f7450-6c6a-8d2d-5e86-4ad35a59c550",
+     "validation_regex": "",
+     "label": "Company",
+     "name": "company",
+     "default": "Merck"
+    },
+    {
+     "type": "text",
+     "id": "0c8ce283-fcee-8afe-cd88-8238f9e3dfe4",
+     "validation_regex": "",
+     "label": "Name",
+     "name": "quote_name",
+     "default": "Michael DiGruccio"
+    },
+    {
+     "type": "text",
+     "id": "18694ae0-dde3-5d55-515a-8970879b4414",
+     "validation_regex": "",
+     "label": "Quote",
+     "name": "quote",
+     "default": "“I have been a user of nQuery software since the late 90's for sample size calculations in clinical trials. For the last 14 years nQuery has been a standard product in our toolkit.”"
+    },
+    {
+     "type": "image",
+     "id": "70a85b0c-1150-f373-3762-cc483172eafb",
+     "default": {
+      "size_type": "auto",
+      "src": "https://www.statsols.com/hubfs/merck-panel-img.jpg",
+      "alt": "merck-panel-img",
+      "loading": "lazy",
+      "width": 1116,
+      "height": 864,
+      "max_width": 1116,
+      "max_height": 864
+     },
+     "resizable": true,
+     "responsive": true,
+     "show_loading": false,
+     "label": "Panel Image",
+     "name": "panel_image"
+    },
+    {
+     "type": "image",
+     "id": "532387d1-e1ce-1c6c-47c5-2936381c334b",
+     "default": {
+      "size_type": "auto",
+      "src": "https://www.statsols.com/hubfs/merck-logo.png",
+      "alt": "merck-logo",
+      "loading": "lazy",
+      "width": 241,
+      "height": 140,
+      "max_width": 241,
+      "max_height": 140
+     },
+     "resizable": true,
+     "responsive": true,
+     "show_loading": false,
+     "label": "Logo",
+     "name": "logo"
+    }
+   ],
+   "name": "customer_info",
+   "default": [],
+   "occurrence": {}
+  }
+ ]

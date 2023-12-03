@@ -1,0 +1,75 @@
+[
+  {
+   "allow_new_line": false,
+   "default": "Learn More",
+   "display_width": null,
+   "id": "1f414455-d80f-1af3-7606-da0eecad1850",
+   "label": "Text",
+   "locked": false,
+   "name": "text",
+   "required": false,
+   "show_emoji_picker": false,
+   "type": "text",
+   "validation_regex": ""
+  },
+  {
+   "default": {
+    "color": "#2EC99B",
+    "opacity": 100
+   },
+   "display_width": null,
+   "id": "4a9910d9-f4aa-de0e-dc3d-aa173250a7f0",
+   "label": "Caret Color",
+   "locked": false,
+   "name": "caret_color",
+   "required": false,
+   "show_opacity": false,
+   "type": "color"
+  },
+  {
+   "type": "link",
+   "id": "93692d5f-f0fa-848c-656f-5646a1a1e6a1",
+   "default": {
+    "url": {
+     "content_id": null,
+     "type": "EXTERNAL",
+     "href": ""
+    },
+    "open_in_new_tab": false,
+    "no_follow": false
+   },
+   "supported_types": [
+    "EXTERNAL",
+    "CONTENT",
+    "BLOG",
+    "CALL_TO_ACTION",
+    "PHONE_NUMBER"
+   ],
+   "label": "Link",
+   "name": "link"
+  },
+  {
+    "type": "group",
+    "isNew": false,
+    "name": "style",
+    "label": "Style",
+    "tab": "STYLE",
+    "id": "2643cc0f-1a8a-9426-6ad2-b3ffacf5ba91",
+    "children": [
+     {
+      "type": "alignment",
+      "id": "c1ac054d-0969-ca94-6d07-3a05e649ff7e",
+      "label": "Alignment",
+      "name": "alignment_field",
+      "default": {
+       "horizontal_align": "LEFT"
+      }
+     }
+    ],
+    "default": {
+     "alignment_field": {
+      "horizontal_align": "LEFT"
+     }
+    }
+   }
+ ]

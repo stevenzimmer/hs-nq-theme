@@ -1,0 +1,27 @@
+[
+  {
+   "default": {
+    "size_type": "auto",
+    "src": "https://www.statsols.com/hubfs/Customer%20Logos.png",
+    "alt": "Customer Logos",
+    "loading": "lazy",
+    "width": 321,
+    "height": 320,
+    "max_width": 321,
+    "max_height": 320
+   },
+   "display_width": null,
+   "id": "1ace1904-7b6a-11db-76b1-311cf99044ac",
+   "label": "Image",
+   "locked": false,
+   "name": "image_field",
+   "occurrence": {},
+   "required": false,
+   "resizable": true,
+   "responsive": true,
+   "show_loading": false,
+   "type": "image",
+   "help_text": "",
+   "inline_help_text": "Logo should be centered on a square canvas"
+  }
+ ]

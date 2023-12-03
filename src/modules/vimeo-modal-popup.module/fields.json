@@ -1,0 +1,44 @@
+[
+  {
+   "default": {
+    "size_type": "auto",
+    "src": "https://www.statsols.com/hubfs/modal-popup-thumbnail.jpg",
+    "alt": "modal-popup-thumbnail",
+    "loading": "lazy",
+    "width": 1378,
+    "height": 807,
+    "max_width": 1378,
+    "max_height": 807
+   },
+   "display_width": null,
+   "id": "2b5012c0-eef9-c213-962a-df9b24e21939",
+   "label": "Image",
+   "locked": false,
+   "name": "image",
+   "required": false,
+   "resizable": true,
+   "responsive": true,
+   "show_loading": false,
+   "type": "image"
+  },
+  {
+   "allow_new_line": false,
+   "display_width": null,
+   "id": "5895f9c9-46fc-c022-cb64-19a31c84d19d",
+   "label": "Vimeo ID",
+   "locked": false,
+   "name": "vimeo_id",
+   "required": false,
+   "show_emoji_picker": false,
+   "type": "text",
+   "validation_regex": ""
+  },
+  {
+   "type": "text",
+   "id": "27a67ad0-1385-862a-4932-a88eb6c28466",
+   "validation_regex": "",
+   "label": "Unique ID",
+   "name": "unique_id",
+   "inline_help_text": "Provide a unique ID for this module to ensure proper modal popup open triggers."
+  }
+ ]
