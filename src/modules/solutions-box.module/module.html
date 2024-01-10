@@ -1,15 +1,26 @@
 <!-- module html  -->
+<div class="border-l border-[#BAC0B8] p-[24px] block  hover:bg-nq-grey/30 hover:border-nq-jade group relative z-0">
 {% set href = module.link.url.href %}
 {% if module.link.url.type is equalto "EMAIL_ADDRESS" %}
 	{% set href = "mailto:" + href %}
 {% endif %}
-<a href="{{ href }}"
-{% if module.link.open_in_new_tab %}target="_blank"{% endif %}
-{% if module.link.rel %}rel="{{ module.link.rel }}"{% endif %} class="border-l border-[#BAC0B8] p-[24px] block hover:bg-white hover:border-nq-jade group">
+<a href="{{ href }}" {% if module.link.open_in_new_tab %}target="_blank"{% endif %}
+{% if module.link.rel %}rel="{{ module.link.rel }}"{% endif %} class="absolute w-full h-full inset-0 z-10"></a>
+
   <p class="text-[23px] group-hover:text-nq-jade mb-[8px]">
     {{ module.title }}
   </p>
-  <p class="text-[18px] text-nq-primary">
+  <p class="text-[18px] text-nq-primary font-normal">
     {{ module.description }}
   </p>
-</a>
+
+  <div class="flex items-center group mt-[12px]">
+    <div>
+      <p class="text-[16px] font-semibold text-nq-forest m-0">Learn More</p>
+    </div>
+    <div class="px-1"><svg class="group-hover:translate-x-0.5 transition-transform duration-200" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6.5 4L10.5 8L6.5 12" stroke="#2EC99B" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</div>
