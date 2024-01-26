@@ -1,5 +1,10 @@
 <!-- module html  -->
-<div class="border-l border-[#BAC0B8] p-[24px] block  hover:bg-nq-grey/30 hover:border-nq-jade group relative z-0">
+{% set hover_bg = "hover:bg-nq-grey/30" %}
+{% if module.hover_background == "light" %}
+  {% set hover_bg = "hover:bg-white/75" %}
+{% endif %}
+
+<div class="border-l border-[#BAC0B8] p-[24px] block  {{hover_bg}} hover:border-nq-jade group relative z-0">
 {% set href = module.link.url.href %}
 {% if module.link.url.type is equalto "EMAIL_ADDRESS" %}
 	{% set href = "mailto:" + href %}
@@ -14,6 +19,8 @@
     {{ module.description }}
   </p>
 
+  {% if show_cta_link %}
+
   <div class="flex items-center group mt-[12px]">
     <div>
       <p class="text-[16px] font-semibold text-nq-forest m-0">Learn More</p>
@@ -23,4 +30,5 @@
       </svg>
     </div>
   </div>
+  {% endif %}
 </div>

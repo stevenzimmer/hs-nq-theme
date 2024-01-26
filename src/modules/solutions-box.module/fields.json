@@ -1,23 +1,31 @@
 [
   {
-   "type": "text",
+   "allow_new_line": false,
+   "default": "Classical Statistics",
+   "display_width": null,
    "id": "bdf986f7-1c27-f9e5-f313-05501ab3db89",
-   "validation_regex": "",
    "label": "Title",
+   "locked": false,
    "name": "title",
-   "default": "Classical Statistics"
-  },
-  {
+   "required": false,
+   "show_emoji_picker": false,
    "type": "text",
-   "id": "a76d1194-9591-447d-91aa-580ea6524f1e",
-   "validation_regex": "",
-   "label": "Description",
-   "name": "description",
-   "default": "Solutions for Frequentist & Fixed-term trials"
+   "validation_regex": ""
   },
   {
-   "type": "link",
-   "id": "00404ac0-0a4e-9d33-214f-83047aa6ea1d",
+   "allow_new_line": false,
+   "default": "Solutions for Frequentist & Fixed-term trials",
+   "display_width": null,
+   "id": "a76d1194-9591-447d-91aa-580ea6524f1e",
+   "label": "Description",
+   "locked": false,
+   "name": "description",
+   "required": false,
+   "show_emoji_picker": false,
+   "type": "text",
+   "validation_regex": ""
+  },
+  {
    "default": {
     "url": {
      "content_id": null,
@@ -27,13 +35,46 @@
     "open_in_new_tab": false,
     "no_follow": false
    },
+   "display_width": null,
+   "id": "00404ac0-0a4e-9d33-214f-83047aa6ea1d",
+   "label": "Link",
+   "locked": false,
+   "name": "link",
+   "required": false,
+   "show_advanced_rel_options": false,
    "supported_types": [
     "EXTERNAL",
     "CONTENT",
     "EMAIL_ADDRESS",
     "BLOG"
    ],
-   "label": "Link",
-   "name": "link"
+   "type": "link"
+  },
+  {
+   "type": "choice",
+   "id": "f3629fb2-964a-afe1-bbdc-db2e4ee84c2a",
+   "display": "radio",
+   "choices": [
+    [
+     "dark",
+     "Dark"
+    ],
+    [
+     "light",
+     "Light"
+    ]
+   ],
+   "label": "Hover Background",
+   "name": "hover_background",
+   "default": "dark",
+   "help_text": "Set Box's hover background theme"
+  },
+  {
+   "type": "boolean",
+   "id": "d148902c-ba01-3d15-b07e-f27af68710fd",
+   "default": false,
+   "display": "checkbox",
+   "label": "Show CTA Link?",
+   "name": "show_cta_link"
   }
  ]

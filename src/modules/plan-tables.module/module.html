@@ -1,0 +1,23 @@
+<!-- module html  -->
+<div class="bg-white p-6">
+    <div class="relative">
+        <div class="absolute right-1 top-0 bottom-0 flex items-center  md:px-6 ">
+            <svg class="bg-white w-[16px] md:w-[25px]" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.5 21L15.5 15M17.5 10C17.5 13.866 14.366 17 10.5 17C6.63401 17 3.5 13.866 3.5 10C3.5 6.13401 6.63401 3 10.5 3C14.366 3 17.5 6.13401 17.5 10Z" stroke="#293640" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <input type="text" placeholder="Search for nQuery tables by design, goal or analysis method" class="w-full border rounded p-2 md:p-3 text-xs md:text-sm table-input"/>
+    </div>
+    <div class="text-black mt-3 text-xs sm:text-sm search-results-showing px-2 sm:px-6">All nQuery tables are shown below. Search to filter.</div>
+    
+</div>
+
+<div class="nQueryPacks-no-results" style="display:none;">
+Sorry! No results match that description.<br />
+<small><strong>Tip</strong> - Try entering part of the name. e.g. <strong>Group</strong> will display all <strong>Group Sequential Trial
+tables</strong></small>
+<br />
+<span class="button g11 emtpy white-fill small">Click here to reset and view all tables</span>
+</div>
+
+<div class="plan-tables max-h-[400px] overflow-y-scroll px-1 md:px-6 bg-white"></div>

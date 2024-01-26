@@ -1,5 +1,5 @@
 .btn {
-    @apply px-[24px] py-[8px] rounded-full font-medium border-2 no-underline hover:no-underline inline-block transition duration-200;
+    @apply px-[24px] py-[8px] rounded-full font-semibold border-2 no-underline hover:no-underline inline-block transition duration-200 tracking-wide;
 
     &-lg {
         @apply px-[40px] py-[16px];
@@ -11,11 +11,10 @@
 
 }
 
-/* .hs_cos_wrapper_widget {
-    .hs-button {
-        @apply hover:scale-105;
-    }
-} */
+.button-wrapper .button {
+    @apply font-semibold tracking-wide;
+}
+
 @media(max-width: 767px) {
 .button {
     @apply text-[18px] px-[32px] py-[12px] !important;

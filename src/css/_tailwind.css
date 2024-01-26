@@ -1,7 +1,11 @@
 @tailwind base;
 @layer base {
     html {
-        @apply overflow-x-hidden;
+        @apply overflow-x-hidden antialiased;
+    }
+
+    body {
+        @apply text-base text-nq-primary;
     }
 
     ul {
@@ -19,10 +23,6 @@
 
     h1 {
         @apply leading-tight;
-    }
-
-    h2,h3,p {
-
     }
 }
 @tailwind components;

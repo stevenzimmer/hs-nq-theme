@@ -24,7 +24,9 @@ module.exports = {
                     forest: "#152430",
                     primary: "#515C62",
                     jade: "#2EC99B",
-                    grey: "#DBDFD4"
+                    grey: "#DBDFD4",
+                    pebble: "#907680",
+                    hazel: "#BAB78D"
                 },
             },
             animation: {

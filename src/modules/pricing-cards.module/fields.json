@@ -1,0 +1,76 @@
+[
+  {
+   "type": "group",
+   "id": "41f6ac02-0c0a-c902-4e4c-98827e9b9abb",
+   "label": "Cards",
+   "children": [
+    {
+     "type": "text",
+     "id": "336fafb5-8487-7be0-95b3-182dddb103de",
+     "validation_regex": "",
+     "label": "Title",
+     "name": "title"
+    },
+    {
+     "type": "boolean",
+     "id": "34b9d82c-6575-1cec-44f6-e2ebf03a91ec",
+     "default": false,
+     "display": "toggle",
+     "label": "Most Popular",
+     "name": "most_popular"
+    },
+    {
+     "type": "richtext",
+     "id": "f5741a1b-026b-b94b-aac7-c09d5e713534",
+     "label": "Terms",
+     "name": "terms"
+    },
+    {
+     "type": "text",
+     "id": "e6b2a308-3b01-c60e-52d7-2bef3002a64d",
+     "validation_regex": "",
+     "label": "Academic Price",
+     "name": "academic_price"
+    },
+    {
+     "type": "text",
+     "validation_regex": "",
+     "label": "Corporate Price",
+     "name": "corporate_price",
+     "oldId": "e6b2a308-3b01-c60e-52d7-2bef3002a64d",
+     "id": "5548b88d-7434-726d-4774-4100987ed36c"
+    },
+    {
+     "type": "link",
+     "id": "118b51a6-2000-a245-ea3c-3a73be1d173b",
+     "default": {
+      "url": {
+       "content_id": null,
+       "type": "EXTERNAL",
+       "href": ""
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+     },
+     "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "BLOG"
+     ],
+     "label": "Button Link",
+     "name": "button_link"
+    },
+    {
+     "type": "richtext",
+     "id": "0bed845c-8ebf-7334-1fad-d05012f9eafa",
+     "label": "Plan Description",
+     "name": "plan_description"
+    }
+   ],
+   "name": "cards",
+   "default": [],
+   "occurrence": {
+    "max": 4
+   }
+  }
+ ]
