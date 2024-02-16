@@ -4,6 +4,7 @@
         @apply overflow-x-hidden antialiased;
     }
 
+    html,
     body {
         @apply text-base text-nq-primary;
     }

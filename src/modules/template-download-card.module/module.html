@@ -1,0 +1,70 @@
+<!-- module html  -->
+
+{% set downloadHref = module.download.link.url.href %}
+{% if module.download.link.url.type is equalto "EMAIL_ADDRESS" %}
+  {% set downloadHref = "mailto:" + downloadHref %}
+{% endif %}
+
+{% set href = module.button.link.url.href %}
+  {% if module.button.link.url.type is equalto "EMAIL_ADDRESS" %}
+    {% set href = "mailto:" + href %}
+  {% endif %}
+
+
+<div class="bg-white p-6 border border-nq-grey hover:shadow-md transition-shadow duration-200 download-card mb-6">
+  <div class="mb-3">
+    <div class="flex items-center download-card-title cursor-pointer select-none">
+      <div class="download-card-arrow origin-center duration-200 -rotate-90">
+        <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.6" clip-path="url(#clip0_1826_24426)">
+        <path d="M12 11L6 17L7.15256e-07 11" fill="#1A2836"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_1826_24426">
+        <rect width="24" height="12" fill="white" transform="matrix(0 1 -1 0 12 0)"/>
+        </clipPath>
+        </defs>
+        </svg>
+      </div>
+      <h4 class="font-semibold px-3 leading-tight">{{ module.title }}</h4>
+    </div>
+    
+  </div>
+  <div class="mb-3 download-card-description hidden text-[#1A2836] text-sm">
+  {{ module.description }}
+  </div>
+
+  <div class="flex flex-wrap justify-between items-center">
+    <div class="py-3">
+    {% if downloadHref %}
+      <a href="{{ downloadHref }}"
+      {% if module.download.link.open_in_new_tab %}target="_blank"{% endif %}
+      {% if module.download.link.rel %}rel="{{ module.download.link.rel }}"{% endif %}class="flex items-center text-xs md:text-sm text-nq-forest/50 w-full whitespace-nowrap hover:text-nq-forest group">
+
+      {%  if module.download.text %}
+        {{ module.download.text }}
+        {% else %}
+          Download Sample Data
+        {% endif %}
+       &nbsp; <svg stroke="currentColor" fill="currentColor"  class="text-[#BAC0B8] group-hover:text-nq-jade" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2.66602 11.3337V12.667C2.66602 13.0206 2.80649 13.3598 3.05654 13.6098C3.30659 13.8598 3.64573 14.0003 3.99935 14.0003H11.9993C12.353 14.0003 12.6921 13.8598 12.9422 13.6098C13.1922 13.3598 13.3327 13.0206 13.3327 12.667V11.3337M4.66602 7.33366L7.99935 10.667M7.99935 10.667L11.3327 7.33366M7.99935 10.667V2.66699"  stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+      </svg>
+      
+      </a>
+    {% endif %}
+    </div>
+    <div>
+    {% if href %}
+      <a href="{{ href }}"
+        {% if module.button.link.open_in_new_tab %}target="_blank"{% endif %}
+        {% if module.button.link.rel %}rel="{{ module.button.link.rel }}"{% endif %} class="btn border-nq-jade whitespace-nowrap text-center text-xs md:text-sm hover:bg-nq-jade hover:text-white">
+        {%  if module.button.text %}
+        {{ module.button.text }}
+        {% else %}
+          Video Tutorial
+        {% endif %}
+      </a>
+    {% endif %}
+    </div>
+  </div>
+</div>

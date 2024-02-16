@@ -1,0 +1,14 @@
+{{ require_js("https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js", "footer") }}
+{{ require_js("https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js", "footer") }}
+{{ require_js("https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/sticky.min.js", "footer") }}
+
+<!-- module html  -->
+<div class="flex justify-center flex-wrap lg:flex-nowrap -mx-1 items-end sticky top-0 bg-white">
+{% for header in module.headers %}
+  <div class="w-1/2 sm:w-1/3 lg:w-auto px-1 md:px-3 text-center">
+    <a href="#section-{{loop.index0}}" class="text-center py-1 md:py-3 mb-3 block border-b-4 border-nq-grey hover:border-nq-jade {% if loop.first %} active {% endif %} header-item  whitespace-nowrap text-[10px] sm:text-sm px-1 lg:px-3">
+      {{ header }}
+    </a>
+  </div>
+{% endfor %}
+</div>

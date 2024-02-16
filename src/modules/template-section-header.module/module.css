@@ -1,0 +1,19 @@
+html {
+  scroll-behavior: smooth;
+}
+.header-item.active {
+  border-color: #2EC99B;
+}
+
+.stuck {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+
+}
+
+.section-header {
+  scroll-margin-top: 210px;
+}

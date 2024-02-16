@@ -1,0 +1,10 @@
+[
+  {
+   "type": "text",
+   "id": "b0896e87-ee08-11ba-32c9-619c7a4890da",
+   "validation_regex": "",
+   "label": "Anchor Header",
+   "name": "headers",
+   "occurrence": {}
+  }
+ ]
