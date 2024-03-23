@@ -1,0 +1,393 @@
+<!--
+    templateType: page
+    label: Template Download
+    isAvailableForNewContent: true
+-->
+{% extends "../layouts/base.html" %}
+
+{% block body %}
+  {% dnd_area "dnd_area" class='template-download', label='Drag and Drop Area' %}
+    {% dnd_section
+      padding={
+        "default" : {
+          "bottom" : "0px",
+          "top" : "32px"
+        }
+      }
+    %}
+      {% dnd_column
+        offset=0,
+        width=12
+      %}
+        {% dnd_row %}
+          {% dnd_module
+            path="/nquery-theme/cli-build/modules/section-cta",
+            offset=0,
+            width=12,
+            link={
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "content_id" : 157095197747,
+                "type" : "CONTENT"
+              }
+            },
+            reverse_caret=true,
+            style={
+              "alignment_field" : {
+                "horizontal_align" : "LEFT"
+              }
+            },
+            text="Back to Templates"
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path="@hubspot/rich_text",
+            offset=0,
+            width=12,
+            margin={
+              "default" : {
+                "top" : "32px",
+                "bottom" : "32px"
+              }
+            }
+          %}
+            {% module_attribute "html" %}
+              <h1>Group Sequential Design Template</h1>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path="@hubspot/rich_text",
+            offset=0,
+            width=12
+          %}
+            {% module_attribute "html" %}
+              <hr>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+
+
+
+
+
+    {% dnd_section
+      padding={
+        "default" : {
+          "top" : "64px"
+        },
+        "mobile" : {
+          "bottom" : "64px"
+        }
+      },
+      full_width=false
+    %}
+      {% dnd_column
+        offset=0,
+        width=4
+      %}
+        {% dnd_row %}
+          {% dnd_module
+            path="@hubspot/rich_text",
+            offset=0,
+            width=12,
+            margin={
+              "default" : {
+                "bottom" : "12px"
+              }
+            }
+          %}
+            {% module_attribute "html" %}
+              <h2 style="line-height: 1.25; font-size: 28px;">What is Linear Regression?</h2>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path="@hubspot/rich_text",
+            offset=0,
+            width=12,
+            margin={
+              "default" : {
+                "bottom" : "32px"
+              }
+            }
+          %}
+            {% module_attribute "html" %}
+              <p>Linear regression is used in clinical trials to evaluate the relationship between two continuous variables. The goal of linear regression is often to model the relationship between an independent variable (such as a treatment or a risk factor) and a dependent variable (such as a patient outcome or a biomarker).</p>
+              <p>&nbsp;</p>
+              <p><span style="color: #515c62;"><em>Recommended Viewing:&nbsp;</em></span></p>
+              <p style="font-size: 16px;">24:58s - <span style="color: #515c62;"><a href="https://www.statsols.com/templates/linear-regression?hsLang=en-us" rel="noopener" style="color: #515c62; text-decoration: underline;"><span style="font-weight: bold;">Linear Regression</span></a></span></p>
+<p style="font-size: 16px;">30:10s - <span style="color: #515c62;"><a href="https://www.statsols.com/templates/logistic-regression?hsLang=en-us" rel="noopener" style="color: #515c62; text-decoration: underline;"><span style="font-weight: bold;">Logistic Regression</span></a></span></p>
+<p style="font-size: 16px;">31:26s - <span style="color: #515c62;"><a href="https://www.statsols.com/templates/cox-regression?hsLang=en-us" rel="noopener" style="color: #515c62; text-decoration: underline;"><span style="font-weight: bold;">Cox Regression</span></a></span></p>
+<p style="font-size: 16px;">41:54s - <span style="color: #515c62;"><a href="https://www.statsols.com/templates/level-hierarchical-design?hsLang=en-us" rel="noopener" style="color: #515c62; text-decoration: underline;"><span style="font-weight: bold;">2 level-hierarchical-design</span></a></span></p>
+<p style="font-size: 16px;">55:18s - <span style="color: #515c62;"><a href="https://www.statsols.com/templates/clinical-prediction-model?hsLang=en-us" rel="noopener" style="color: #515c62; text-decoration: underline;"><span style="font-weight: bold;">Clinical Prediction Model</span></a></span></p>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path="@hubspot/cta",
+            offset=0,
+            width=12,
+            guid="d040e636-2c13-44eb-b813-6fee0b884721"
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+      {% dnd_column
+        offset=4,
+        width=8
+      %}
+        {% dnd_row %}
+          {% dnd_module
+            path="@hubspot/video",
+            offset=0,
+            width=12,
+            embed_field={
+              "embed_html" : "<iframe src=\"//fast.wistia.net/embed/iframe/avadtzgd00?time=55m18s\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" class=\"wistia_embed\" name=\"wistia_embed\" allowfullscreen=\"\" mozallowfullscreen=\"\" webkitallowfullscreen=\"\" oallowfullscreen=\"\" msallowfullscreen=\"\" width=\"100%\" height=\"100%\" allow=\"fullscreen\"></iframe>",
+              "source_type" : "html",
+              "supported_oembed_types" : [ "video" ]
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+
+
+    {% dnd_section
+      padding={
+        "default" : {
+          "bottom" : "0px",
+          "top" : "0px"
+        }
+      }
+    %}
+      {% dnd_column
+        offset=0,
+        width=12
+      %}
+        {% dnd_row %}
+          {% dnd_module
+            path="@hubspot/rich_text",
+            offset=0,
+            width=12,
+            margin={
+                "default": {
+                  "bottom": "64px"
+                }
+              }
+          %}
+            {% module_attribute "html"%}
+              <hr>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path="@hubspot/rich_text",
+            offset=0,
+            width=12
+          %}
+            {% module_attribute "html" %}
+              <h2 style="text-align: center; font-size: 28px;">Other Popular Templates</h2>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+
+    {% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "0px",
+      "top" : "32px"
+    }
+  },
+  full_width=false
+%}
+  {% dnd_column
+    offset=0,
+    width=6,
+    padding={
+      "default" : {
+        "left" : "0px",
+        "right" : "0px"
+      }
+    }
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/nquery-theme/cli-build/modules/template-download-card",
+        offset=0,
+        width=12,
+        button={
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "rel" : "",
+            "sponsored" : false,
+            "url" : {
+              "content_id" : 82100076466,
+              "type" : "CONTENT"
+            },
+            "user_generated_content" : false
+          }
+        },
+        popup={
+          "cta" : "3635e3a8-d69e-4af3-b6fa-a8616bca2482"
+        },
+        title="Randomization in Clinical Trials"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=6,
+    width=6,
+    padding={
+      "default" : {
+        "left" : "0px",
+        "right" : "0px"
+      }
+    }
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/nquery-theme/cli-build/modules/template-download-card",
+        offset=0,
+        width=12,
+        button={
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "rel" : "",
+            "sponsored" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            },
+            "user_generated_content" : false
+          }
+        },
+        popup={
+          "cta" : "ecf70146-3684-47d6-bd09-06349f35e30c"
+        },
+        title="Adaptive Clinical Trial Design Training (pt 1-3)"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "0px",
+      "top" : "0px"
+    }
+  },
+  full_width=false
+%}
+  {% dnd_column
+    offset=0,
+    width=6,
+    padding={
+      "default" : {
+        "left" : "0px",
+        "right" : "0px"
+      }
+    }
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/nquery-theme/cli-build/modules/template-download-card",
+        offset=0,
+        width=12,
+        button={
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "rel" : "",
+            "sponsored" : false,
+            "url" : {
+              "content_id" : 107515553178,
+              "type" : "CONTENT"
+            },
+            "user_generated_content" : false
+          }
+        },
+        popup={
+          "cta" : "fc086877-538e-40bb-a487-08a59a09f796"
+        },
+        title="Clinical Prediction Model"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+  {% dnd_column
+    offset=6,
+    width=6,
+    padding={
+      "default" : {
+        "left" : "0px",
+        "right" : "0px"
+      }
+    }
+  %}
+
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+
+
+
+    {% dnd_section
+      padding={
+        "default" : {
+          "top" : "32px"
+        }
+      }
+    %}
+      {% dnd_column
+        offset=0,
+        width=12
+      %}
+        {% dnd_row %}
+          {% dnd_module
+            path="/nquery-theme/cli-build/modules/section-cta",
+            offset=0,
+            width=12,
+            link={
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "content_id" : 157095197747,
+                "type" : "CONTENT"
+              }
+            },
+            reverse_caret=false,
+            style={
+              "alignment_field" : {
+                "horizontal_align" : "CENTER"
+              }
+            },
+            text="View All Templates"
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+{% endblock body %}

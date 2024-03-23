@@ -3,7 +3,7 @@
 {{ require_js("https://player.vimeo.com/api/player.js") }}
 
 {% if module.unique_id %}
-<div data-modal-open="{{ module.unique_id }}" class="cursor-pointer relative ">
+<div data-modal-open="{{ module.unique_id }}" class="cursor-pointer relative">
   {% if module.image.src %}
 	{% set sizeAttrs = 'width="{{ module.image.width }}" height="{{ module.image.height }}"' %}
 	{% if module.image.size_type == 'auto' %}
@@ -39,3 +39,12 @@
 	</div>
 
 {% endif %}
+
+{% require_css %}
+  <style>
+  {# .shadow-img img {
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.15), 0px 0px 16px 0px rgba(0, 0, 0, 0.05); #}
+} 
+  </style>
+{% end_require_css %}

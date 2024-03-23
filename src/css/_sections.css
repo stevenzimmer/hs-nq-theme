@@ -50,3 +50,9 @@
     @apply relative;
   }
 }
+
+.template-download {
+  .embed_container {
+    @apply border-2 border-[#BAC0B8] rounded overflow-hidden;
+  }
+}

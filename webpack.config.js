@@ -43,6 +43,7 @@ module.exports = ({ account, autoupload }) => ({
                 { from: "src/partials", to: "partials" },
                 { from: "src/sections", to: "sections" },
                 { from: "src/system", to: "system" },
+                { from: "src/macros", to: "macros" },
             ],
         }),
         new MiniCssExtractPlugin({

@@ -4148,6 +4148,7 @@ for (var i = 0; i < tables.length; i++) {
 
 $('.plan-tables').html(tablesHtml);
 
+// $(".table-input").focus();
 
 var searchTime;
 $('.table-input').bind('keyup', function () {

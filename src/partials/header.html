@@ -52,189 +52,7 @@
     "description": "Software to optimize designs of clinical trials"
   }
 ] %}
-{% set nav_items = [
-  {
-    "title": "nQuery",
-    "url": "#",
-    "columns": [
-      {
-        "label": "Solutions",
-        "items": [
-          {
-            "title": "Sample Size & Power Calculations",
-            "description": "Calculate for a Variety of frequentist and Bayesian Designs",
-            "url": "#"
-          },
-          {
-            "title": "Adaptive Design",
-            "description": "Design and Analyse a Wide Range of Adaptive Designs",
-            "url": "#"
 
-          },
-          {
-            "title": "Milestone Prediction",
-            "description": "Predict Interim Analysis Timing or Study Length",
-            "url": "#"
-
-          },
-          {
-            "title": "Randomization Lists",
-            "description": "Generate and Save Lists for your Trial Design",
-            "url": "#"
-          }
-        ]
-      },
-      {
-      "label": "Capabilities",
-      "items": [
-        {
-          "title": "Group Sequential and Promising Zone Designs",
-          "description": "Calculate Boundaries & Find Sample Size, Evaluate Interim Data & Re-estimate Sample Size",
-          "url": "#"
-        },
-        {
-          "title": "Sample Size for Bayesian Statistics",
-          "description": "Probability of Success (Assurance), Credible Intervals, Bayes Factors and more",
-          "url": "#"
-
-        },
-        {
-          "title": "Early Stage and Complex Designs",
-          "description": "Sample size & operating characteristics for Phase I, II & Seamless Designs (MAMS)",
-          "url": "#"
-
-        }
-      ]
-    },
-      {
-        "label": "Software",
-        "items": [
-          {
-            "title": "Templates",
-            "url": "#",
-            "btn": true,
-          },
-          {
-            "title": "What's New",
-            "url": "#"
-
-          },
-          {
-            "title": "Procedures",
-            "url": "#"
-
-          },
-          {
-            "title": "About nQuery",
-            "url": "#",
-          }
-          
-        ]
-      }
-    ]
-
-  },
-  {
-    "title": "Customers",
-    "url": "#"
-  },
-  {
-    "title": "Resources",
-    "url": "#",
-    "columns": [
-      {
-        "label": "Learn",
-        "items": [
-          {
-            "title": "Trial Design Templates",
-            "url": "#"
-
-          },
-          {
-            "title": "Training Webinars",
-            "url": "#"
-
-          },
-          {
-            "title": "Sample Size Examples",
-            "url": "#"
-
-          },
-          {
-            "title": "All Resources",
-            "url": "#"
-
-          },
-          {
-            "title": "Knowledge Base",
-            "url": "#"
-
-          }
-        ]
-      }
-    ],
-    "box": {
-      "title": "Sample Size Resource Center",
-      "description": "Improve your knowledge and calculation of sample size",
-      "link": {
-        "title": "Explore Resource Center",
-        "url": "#"
-      }
-    }
-
-  },
-  {
-    "title": "Contact",
-    "url": "#",
-    "columns": [
-      {
-        "label": "support",
-        "items": [
-          {
-            "title": "Licensing Support",
-            "url": "#"
-          },
-          {
-            "title": "Technical Support",
-            "url": "#"
-          },
-          {
-            "title": "Login to Support",
-            "url": "#"
-          },
-          {
-            "title": "Submit Support Ticket",
-            "url": "#"
-          }
-        ]
-      }
-    ],
-    "box": {
-      "title": "Knowledge Base",
-      "description": "Access your support & learning lab with tutorials and tips to optimize your clinical trial design.",
-      "link": {
-        "title": "Explore Help Center",
-        "url": "#"
-      }
-    }
-  }
-] %}
-
-{% macro menu_item(item)  %}
-<div class="mb-3">                
-  <div>
-<a href="{{item.url}}" class="text-nq-forest hover:text-nq-jade text-[16px] {% if item.btn %} {% endif %}">
-      {{item.title}}
-    </a>
-  </div>
-  {% if item.description %}
-  <div>
-    <p class="text-black/60 text-[12px] group-hover/menu-item:text-black">{{item.description}}</p>
-    
-  </div>
-  {% endif %}
-</div>
-{% endmacro %}
 <div class="bg-nq-forest hidden lg:block relative">
  
   <div class="container px-6 py-[12px]">
@@ -316,7 +134,6 @@
   </div>
 </div>
 
-
 <nav class="bg-white relative z-10 main-nav">
   <div class="container px-6">
     <div class="flex items-center">
@@ -338,119 +155,20 @@
             </div>
           </div>
         </div>
-        <div class="w-full hidden lg:flex flex-col lg:flex-row items-center absolute lg:static right-0 bg-white lg:top-[100px] lg:bg-transparent main-nav-menu pb-32 lg:pb-0 overflow-y-scroll lg:overflow-visible h-screen lg:h-full  " id="main-nav-menu">
+        <div class="w-full hidden lg:flex flex-col lg:flex-row items-center absolute lg:static right-0 bg-white top-[65px] lg:top-[100px] lg:bg-transparent main-nav-menu pb-32 lg:pb-0 overflow-y-scroll lg:overflow-visible h-screen lg:h-full shadow-[0_3px_3px_rgba(0,0,0,0.1)] lg:shadow-none" id="main-nav-menu">
           <div class="px-6 lg:px-0 w-full lg:w-2/3 mb-6 lg:mb-0 py-6 lg:py-0">
             
-            <ul class="flex flex-col lg:flex-row  lg:items-center lg:justify-center lg:space-x-6 pl-0 list-none">
-            
-              {% for item in nav_items %}
-              
-              <li class="group m-0">
-                <div class="flex items-center relative">
-                  <a href="{{item.url}}" class="text-nq-forest lg:group-hover:text-nq-jade text-[16px] block py-3 lg:py-6 menu-item before:absolute before:bottom-[2px] before:left-0 before:w-full before:h-[2px] before:invisible before:scale-x-0 before:transition-all before:duration-200 before:ease-in-out before:origin-bottom before:content-[' '] lg:group-hover:before:visible lg:group-hover:before:scale-x-100 lg:group-hover:before:bg-nq-jade font-semibold lg:font-normal">
-                    {{item.title}}
-                  </a>
-                  <div class="px-1 hidden lg:block">
-                  {% if item.columns %}
-
-                    <svg class="origin-center duration-200 ease-in-out lg:group-hover:rotate-180 transition-transform" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4 6L8 10L12 6" stroke="black" stroke-linecap="square" stroke-linejoin="round"/>
-                      </svg>    
-                  {% endif %}                  
-                  </div>
-                </div>
-
-                {% if item.box %}
-              
-                <div class="relative lg:absolute left-0  w-full px-2 lg:p-6 bg-white z-10 lg:hidden group-hover:block">
-                  <div class="container lg:px-6">
-
-                    <div class="flex flex-wrap py-3">
-                      <div class="w-full lg:w-1/3"></div>
-                      <div class="w-full lg:w-2/3">
-                        <div class="flex flex-wrap">
-                          {% for col in item.columns %}
-                          <div class="w-full lg:w-1/2 mb-6 lg:mb-0">
-                            
-                            <div class="mb-3">
-                              <p class="uppercase text-[12px] text-black/50 font-semibold">{{col.label}}</p>
-                              
-                            </div>
-            
-                            {% for item in col.items %}
-                              {{ menu_item(item) }}
-                            {% endfor %}
-                           </div>
-              
-                          {% endfor %}
-                          {# {% if item.box %} #}
-                          <div class="w-full lg:w-1/2">
-                            
-                            <div class="bg-[#F3F3EF] p-[32px] rounded-[6px] relative">
-                              <div class="">
-                                <div class="mb-[16px]">
-                                  <p class="text-[18px] text-nq-forest font-semibold">
-                                    {{item.box.title}}
-                                  </p>
-                                  
-                                </div>
-                                <div class="mb-[64px]">
-                                  <p class="text-[14px] text-nq-forest">
-                                    {{item.box.description}}
-                                  </p>
-                                </div>
-                                
-                              </div>
-                              <div class="absolute left-[32px] bottom-[32px]">
-                                <a href="{{item.box.link.url}}" class="text-[#36AE8A] text-[14px]">{{item.box.link.title}} ></a>
-                              </div>
-                              
-                            </div>
-                            
-                          </div>
-                          {# {% endif %} #}
-              
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {% else %}
-
-                  <div class="relative lg:absolute left-0  w-full px-2 lg:p-6 bg-white z-10 lg:hidden group-hover:block">
-                  <div class="container lg:px-6">
-                    <div class="flex flex-wrap">
-                      {% for col in item.columns %}
-                      <div class="w-full lg:w-1/3 lg:px-6 mb-6 lg:mb-0">
-        
-                        <div class="mb-3">
-                          <p class="uppercase text-[12px] text-black/50 font-semibold">{{col.label}}</p>
-                          
-                        </div>
-        
-                        {% for item in col.items %}
-                          {{ menu_item(item) }}
-                        {% endfor %}
-                      </div>
-                      {% endfor %}
-          
-                    </div>
-                  </div>
-                </div>
-                {% endif %}
-              </li>
-              {% endfor %}
-            </ul>
+          {% module "main_nav" path='../modules/main-nav', label="Main Nav"  %}
         
           </div>
           <div class="w-full lg:w-1/3">
             <div class="flex items-center lg:justify-end w-full space-x-4 px-6 lg:px-0">
               <div>
-                <a href="#" class="btn border-nq-jade text-[16px] text-nq-forest hover:text-nq-forest hover:bg-nq-jade">Pricing</a>
+                <a href="https://www.statsols.com/cs/c/?cta_guid=b002d2c3-0838-4528-8112-f57653c1df7f&signature=AAH58kFHaocVEkIrrnr3JmrspLiTpwW7Qw&pageId=6777925396&placement_guid=711bf1f4-e048-491d-babf-67157ba97610&click=a7e1a4dd-29b6-459a-817d-dd481d2ba6e8&hsutk=1de18858645f72eaa42b1594a8059888&canon=https%3A%2F%2Fwww.statsols.com%2F&portal_id=488764&redirect_url=APefjpGPy1DQHu7QNPI8ibAXO8L2Vs_NUJ2M1bfK8Ggh4q4dV1uyQkE5ZjOUEdH020pegHpxOpCAoj-OndWbOhi7XLW9SDBicZjWCvQNzBihuxWDvM58Qqogp4AoUkLix6g4j-OoFhYqiyKu5wTozyJwBAw4Iio3IJ2ewnJR_aFn3LCojkW7BQPBGyKVtnfLMdHcXo3j02e1NHjKNhvbQiSl5UsthHEEHkIlUHhmtp58m1FWt90Pl9ksKhBUYtrVMkw3Q_859CLG&__hstc=220117958.1de18858645f72eaa42b1594a8059888.1704728282934.1710255602581.1710334480661.38&__hssc=220117958.1.1710334480661&__hsfp=3797905100&contentType=standard-page" class="btn border-nq-jade text-[16px] text-nq-forest hover:text-nq-forest hover:bg-nq-jade">Pricing</a>
               </div>
 
               <div>
-                <a href="#" class="btn border-nq-jade text-[16px] text-nq-forest bg-nq-jade hover:text-nq-forest hover:bg-nq-jade/80">Try Now</a>
+                <a href="https://www.statsols.com/cs/c/?cta_guid=ce9ca1ed-ab3e-4b3d-a807-b06ff58eada2&signature=AAH58kGQqDoamyeBx5jWQVJcqNUrhA3tVg&pageId=6777925396&placement_guid=6ec64bc6-74fa-46e7-a5e6-2a33c7f305cf&click=d6598d38-70fa-4b59-98e6-20649bffdbaa&hsutk=1de18858645f72eaa42b1594a8059888&canon=https%3A%2F%2Fwww.statsols.com%2F&portal_id=488764&redirect_url=APefjpEv9CjGmsd0ylLSAulQVJdj2mEOHGhEis9sbMcKWKWDencCVmT1S3WhVLICWe4IKe61IdoRQ83oxYRvcPWJoacD3Ni2IDMotYzXeQgI_3_0yfrxQlR7ZHT_tG5XQKwaz4MnvmvWKegW7J3BAFChzeo_7xHPEDIvjrqPzDz355CxhbVI2kEN1bS5T8pq2BX_1OoZ4O6Rh9mRIiD5Is9-oQ4GQ1E3-yy1KheCvWv9lHnGOREnqos&__hstc=220117958.1de18858645f72eaa42b1594a8059888.1704728282934.1710255602581.1710334480661.38&__hssc=220117958.1.1710334480661&__hsfp=3797905100&contentType=standard-page" class="btn border-nq-jade text-[16px] text-nq-forest bg-nq-jade hover:text-nq-forest hover:bg-nq-jade/80">Try Now</a>
               </div>
             </div>
           </div>

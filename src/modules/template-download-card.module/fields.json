@@ -21,61 +21,20 @@
    "type": "richtext"
   },
   {
-   "children": [
-    {
-     "allow_new_line": false,
-     "display_width": null,
-     "id": "2a34eec8-1625-66f6-27b2-919b8ede7434",
-     "label": "Text",
-     "locked": false,
-     "name": "text",
-     "required": false,
-     "show_emoji_picker": false,
-     "type": "text",
-     "validation_regex": ""
-    },
-    {
-     "default": {
-      "url": {
-       "content_id": null,
-       "type": "EXTERNAL",
-       "href": ""
-      },
-      "open_in_new_tab": false,
-      "no_follow": false
-     },
-     "display_width": null,
-     "id": "791de5ea-ab8d-39a4-2466-e00e2d7ead9e",
-     "label": "Link",
-     "locked": false,
-     "name": "link",
-     "required": false,
-     "show_advanced_rel_options": false,
-     "supported_types": [
-      "EXTERNAL",
-      "CONTENT",
-      "FILE",
-      "EMAIL_ADDRESS",
-      "BLOG",
-      "CALL_TO_ACTION",
-      "PHONE_NUMBER",
-      "WHATSAPP_NUMBER",
-      "PAYMENT"
-     ],
-     "type": "link"
-    }
-   ],
-   "default": {
-    "link": {
-     "url": {
-      "content_id": null,
-      "type": "EXTERNAL",
-      "href": ""
-     },
-     "open_in_new_tab": false,
-     "no_follow": false
-    }
-   },
+   "allow_new_line": false,
+   "display_width": null,
+   "id": "2a34eec8-1625-66f6-27b2-919b8ede7434",
+   "label": "Download Text",
+   "locked": false,
+   "name": "download_text",
+   "required": false,
+   "show_emoji_picker": false,
+   "type": "text",
+   "validation_regex": ""
+  },
+  {
+   "children": [],
+   "default": {},
    "display_width": null,
    "expanded": false,
    "id": "4f341a86-b4ca-8224-46c8-1f630d398dd3",
@@ -143,6 +102,41 @@
    "label": "Button",
    "locked": false,
    "name": "button",
+   "required": false,
+   "tab": "CONTENT",
+   "type": "group"
+  },
+  {
+   "children": [
+    {
+     "allow_new_line": false,
+     "default": "Your download will start after you submit the form",
+     "display_width": null,
+     "id": "2ef70c44-425d-3a5c-3ef9-b96f42b3c1b5",
+     "label": "Popup Header ",
+     "locked": false,
+     "name": "download_header_popup_copy",
+     "required": false,
+     "show_emoji_picker": false,
+     "type": "text",
+     "validation_regex": ""
+    },
+    {
+     "type": "cta",
+     "id": "9e7eaa77-27b4-ef8a-e4d3-28f6459cbe89",
+     "label": "CTA",
+     "name": "cta"
+    }
+   ],
+   "default": {
+    "download_header_popup_copy": "Your download will start after you submit the form"
+   },
+   "display_width": null,
+   "expanded": false,
+   "id": "74533dcd-c401-8d64-923f-d0deab6c3288",
+   "label": "Popup settings",
+   "locked": false,
+   "name": "popup",
    "required": false,
    "tab": "CONTENT",
    "type": "group"

@@ -3,7 +3,7 @@
   label: Page Footer
 -->
 {% set node = menu(130616632494) %}
-<footer class="bg-white py-20 relative">
+<footer class="bg-white py-20 relative border-t">
 
   <div class="container relative px-6">
     <div class="flex flex-wrap">
@@ -14,6 +14,7 @@
             <p class="text-nq-forest hover:text-nq-forest text-[16px] no-underline font-bold block mb-3 hover:no-underline" >{{child.label}}</p>
             <ul class="m-0 p-0 list-none">
             {% for item in child.children %}
+
             <li class="mb-2">
               <a class="text-nq-forest text-[16px] inline-block no-underline hover:no-underline hover:text-nq-jade leading-normal" href="{{item.url}}">{{item.label}}</a>
             </li>

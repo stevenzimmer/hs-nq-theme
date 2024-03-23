@@ -20,3 +20,20 @@
     @apply text-[18px] px-[32px] py-[12px] !important;
 }
 }
+
+
+.hs-cta-wrapper {
+    @apply w-full;
+    .hs-cta-node {
+        @apply flex items-center justify-center;
+
+        .cta_button {
+            @apply  w-full py-4 px-0 text-center block;
+
+            p {
+                @apply whitespace-nowrap text-nq-forest font-semibold;
+            }
+        }
+    }
+
+}

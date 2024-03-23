@@ -1,0 +1,182 @@
+[
+  {
+   "type": "group",
+   "id": "8e572985-cea7-0522-b4b4-cafaf3a03860",
+   "label": "Menus",
+   "children": [
+    {
+     "type": "text",
+     "id": "65c0c10c-d6ee-d3c0-7f47-d9c1536bba1b",
+     "validation_regex": "",
+     "label": "Title",
+     "name": "title"
+    },
+    {
+     "type": "link",
+     "id": "9933acc8-251c-5554-cdb0-818c419a0035",
+     "default": {
+      "url": {
+       "content_id": null,
+       "type": "EXTERNAL",
+       "href": ""
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+     },
+     "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "BLOG",
+      "CALL_TO_ACTION"
+     ],
+     "label": "Link",
+     "name": "link"
+    },
+    {
+     "type": "group",
+     "id": "1ff1d9e1-e617-d549-5f1e-319f19bc4789",
+     "label": "Columns",
+     "children": [
+      {
+       "type": "text",
+       "id": "8b49689d-22d2-9638-a6cb-6c5595b3b678",
+       "validation_regex": "",
+       "label": "Label",
+       "name": "column_label"
+      },
+      {
+       "type": "group",
+       "id": "7d68d19c-ef42-3d1b-736e-48a9a5e53467",
+       "label": "Items",
+       "children": [
+        {
+         "type": "text",
+         "id": "8de356d6-0ac5-a1ed-3eed-46bf261d9dd0",
+         "validation_regex": "",
+         "label": "Title",
+         "name": "title"
+        },
+        {
+         "type": "text",
+         "id": "7dcdee73-68fd-d886-b3a1-5f8442d93939",
+         "validation_regex": "",
+         "label": "Description",
+         "name": "description"
+        },
+        {
+         "type": "link",
+         "id": "831c709e-f598-6f60-eedd-486f7d0114ba",
+         "default": {
+          "url": {
+           "content_id": null,
+           "type": "EXTERNAL",
+           "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+         },
+         "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "BLOG"
+         ],
+         "label": "Link",
+         "name": "link"
+        }
+       ],
+       "name": "items",
+       "default": [],
+       "occurrence": {}
+      }
+     ],
+     "name": "columns",
+     "default": [],
+     "occurrence": {}
+    },
+    {
+     "type": "group",
+     "id": "0e1224fb-630a-f355-c0b0-ffbe53fd3011",
+     "label": "Box",
+     "children": [
+      {
+       "type": "text",
+       "id": "d38a58aa-1370-ba28-2462-31b0aab5892d",
+       "validation_regex": "",
+       "label": "Title",
+       "name": "title"
+      },
+      {
+       "type": "text",
+       "id": "f6c63208-ce61-e879-b034-8e625d7bcd2a",
+       "validation_regex": "",
+       "label": "Description",
+       "name": "description"
+      },
+      {
+       "type": "group",
+       "id": "6fdf2c3c-95e7-f094-6d3a-f6447917b7b5",
+       "label": "Link",
+       "children": [
+        {
+         "type": "text",
+         "id": "c9feb23e-4a93-bf39-5d1c-73d440bc0dec",
+         "validation_regex": "",
+         "label": "Text",
+         "name": "text"
+        },
+        {
+         "type": "link",
+         "id": "5e91ebd0-3331-abbc-4aca-c2057bbe4221",
+         "default": {
+          "url": {
+           "content_id": null,
+           "type": "EXTERNAL",
+           "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+         },
+         "supported_types": [
+          "EXTERNAL",
+          "CONTENT",
+          "BLOG"
+         ],
+         "label": "URL",
+         "name": "url"
+        }
+       ],
+       "name": "link",
+       "default": {
+        "url": {
+         "url": {
+          "content_id": null,
+          "type": "EXTERNAL",
+          "href": ""
+         },
+         "open_in_new_tab": false,
+         "no_follow": false
+        }
+       }
+      }
+     ],
+     "name": "box",
+     "default": {
+      "link": {
+       "url": {
+        "url": {
+         "content_id": null,
+         "type": "EXTERNAL",
+         "href": ""
+        },
+        "open_in_new_tab": false,
+        "no_follow": false
+       }
+      }
+     }
+    }
+   ],
+   "name": "menus",
+   "default": [],
+   "occurrence": {}
+  }
+ ]

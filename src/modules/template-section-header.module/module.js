@@ -4,64 +4,64 @@
 document.addEventListener("DOMContentLoaded", function() 
 {
 
-  const headers = Array.prototype.slice.call(document.querySelectorAll('.header-item'));
+  // const headers = Array.prototype.slice.call(document.querySelectorAll('.header-item'));
 
-  const sectionHeaders = Array.prototype.slice.call(document.querySelectorAll('.section-header'));
+  // const sectionHeaders = Array.prototype.slice.call(document.querySelectorAll('.section-header'));
 
-  const firstSectionHeader = sectionHeaders[0];
+  // const firstSectionHeader = sectionHeaders[0];
 
-  const lastSectionHeader = sectionHeaders[sectionHeaders.length - 1];
+  // const lastSectionHeader = sectionHeaders[sectionHeaders.length - 1];
 
-  const sectionStickyHeader = document.querySelector('.dnd_area-row-1-background-layers');
+  // const sectionStickyHeader = document.querySelector('.dnd_area-row-1-background-color');
 
-  sectionHeaders.forEach( (sectionHeader,i) => {
+  // sectionHeaders.forEach( (sectionHeader,i) => {
 
-    sectionHeader.setAttribute("id","section-" + i)
+  //   sectionHeader.setAttribute("id","section-" + i)
 
-    const waypointDown = new Waypoint({
-      element: sectionHeader,
-      handler: function(direction) {
+  //   const waypointDown = new Waypoint({
+  //     element: sectionHeader,
+  //     handler: function(direction) {
       
-        if (direction === 'down') {
-          headers.forEach((header) => {
-            header.classList.remove('active');
-          });
-          headers[i].classList.add('active');
+  //       if (direction === 'down') {
+  //         headers.forEach((header) => {
+  //           header.classList.remove('active');
+  //         });
+  //         headers[i].classList.add('active');
 
-          if( i === sectionHeaders.length - 1 ) {
+  //         if( i === sectionHeaders.length - 1 ) {
 
-            sectionStickyHeader.classList.remove('stuck');
-            sectionStickyHeader.classList.add('absolute', "w-full", "left-0", "right-0");
+  //           sectionStickyHeader.classList.remove('stuck');
+  //           sectionStickyHeader.classList.add('absolute', "w-full", "left-0", "right-0");
 
-            sectionStickyHeader.style.top = lastSectionHeader.offsetTop - sectionStickyHeader.offsetHeight - lastSectionHeader.offsetHeight - sectionHeader.offsetHeight  + "px";
+  //           sectionStickyHeader.style.top = lastSectionHeader.offsetTop - sectionStickyHeader.offsetHeight - lastSectionHeader.offsetHeight - sectionHeader.offsetHeight  + "px";
             
-          }
-        }
-      },
-      offset: '30%'
-    });
+  //         }
+  //       }
+  //     },
+  //     offset: '30%'
+  //   });
 
-    const waypointUp = new Waypoint({
-      element: sectionHeader,
-      handler: function(direction) {
-        if (direction === 'up') {
-          headers.forEach((header) => {
-            header.classList.remove('active');
-          });
+  //   const waypointUp = new Waypoint({
+  //     element: sectionHeader,
+  //     handler: function(direction) {
+  //       if (direction === 'up') {
+  //         headers.forEach((header) => {
+  //           header.classList.remove('active');
+  //         });
 
-          headers[i].classList.add('active');
+  //         headers[i].classList.add('active');
         
-            sectionStickyHeader.classList.add('stuck');
-            sectionStickyHeader.classList.remove('absolute', "w-full", "left-0", "right-0");
+  //           sectionStickyHeader.classList.add('stuck');
+  //           sectionStickyHeader.classList.remove('absolute', "w-full", "left-0", "right-0");
 
-            sectionStickyHeader.style.top = 0 + "px";
+  //           sectionStickyHeader.style.top = 0 + "px";
            
-        }
-      },
-      offset: '20%'
-    });
+  //       }
+  //     },
+  //     offset: '20%'
+  //   });
 
-  });
+  // });
 
 
   // const firstSectionWaypoint = new Waypoint({
@@ -95,9 +95,9 @@ document.addEventListener("DOMContentLoaded", function()
     });
   });
 
-  const sticky = new Waypoint.Sticky({
-    element: $('.dnd_area-row-1-background-layers')[0]
-  });
+  // const sticky = new Waypoint.Sticky({
+  //   element: $('.dnd_area-row-1-background-color')[0]
+  // });
 
 
 });

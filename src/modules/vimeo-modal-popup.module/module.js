@@ -11,58 +11,26 @@ if(modals.length) {
 
     }
   });
-
-  // players.forEach((player, i) => {
-  //   // console.log(players[i]);
-  //   player.on("fullscreenchange", function(e){
-  //     // console.log(e.fullscreen);
-  //     // console.log({player});
-  //     if(!e.fullscreen) {
-  //       console.log("exit full screen");
-  //     }
-  //   });
-    
-  // });
-
   MicroModal.init({
     onShow: function(modal) {
-      // console.log({modal});
       document.body.classList.add("overflow-hidden");
       players[modal.dataset.modalNumber].play();
 
-      // if(window.innerWidth < 768 ) {
-        
-      //   players[modal.dataset.modalNumber].on("fullscreenchange", function(e) {
-      //     // console.log(e.fullscreen);
-      //     // console.log({player});
-      //     if(!e.fullscreen) {
-      //       console.log(modal.id);
-      //       console.log("exit full screen");
-      //       MicroModal.close(modal.id); // [2]
-      //     }
-          
-      //   });
-        
-      // }
-    }, // [1]
+    }, 
     onClose: function(modal) {
-      // console.log({modal});
-
+      
       document.body.classList.remove("overflow-hidden");
       players[modal.dataset.modalNumber].pause();
-      // players[modal.dataset.modalNumber].off("fullscreenchange");
-      //   console.log("plater off");
-      
 
-    }, // [2]
-    openTrigger: 'data-modal-open', // [3]
-    closeTrigger: 'data-modal-close', // [4]
-    openClass: 'is-open', // [5]
-    disableScroll: true, // [6]
-    disableFocus: false, // [7]
-    awaitOpenAnimation: false, // [8]
-    awaitCloseAnimation: false, // [9]
-    debugMode: true // [10]
+    },
+    openTrigger: 'data-modal-open',
+    closeTrigger: 'data-modal-close', 
+    openClass: 'is-open',
+    disableScroll: true, 
+    disableFocus: false, 
+    awaitOpenAnimation: false, 
+    awaitCloseAnimation: false,
+    debugMode: true 
   });
 
 }

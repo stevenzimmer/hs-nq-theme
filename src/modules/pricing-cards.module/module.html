@@ -82,7 +82,7 @@
     <div class="px-6">
       <!-- Rounded switch -->
       <label class="switch relative inline-block w-[60px] h-[34px]">
-        <input class="opacity-0 w-0 h0" type="checkbox" id="toggle-switch">
+        <input class="opacity-0 w-0 h0" type="checkbox" id="toggle-switch" checked>
         <span class="slider round absolute cursor-pointer inset-0 bg-nq-primary duration-200"></span>
       </label>
     </div>
@@ -128,7 +128,7 @@
             </div>
             <div class="mb-3">
               <p class="font-bold">
-                &dollar;<span class="academic-price">{{ card.academic_price}}</span><span class="corporate-price hidden">{{ card.corporate_price}}</span>
+                &dollar;<span class="academic-price hidden">{{ card.academic_price}}</span><span class="corporate-price ">{{ card.corporate_price}}</span>
               </p>
               <p class="text-sm text-[#949B99]">
                 {{ card.price_description}}
