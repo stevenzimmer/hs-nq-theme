@@ -27,11 +27,22 @@
    "type": "color"
   },
   {
-   "type": "boolean",
-   "id": "1c749500-cacd-d7a5-dad0-8b115261cef4",
    "default": false,
    "display": "toggle",
+   "display_width": null,
+   "id": "1c749500-cacd-d7a5-dad0-8b115261cef4",
    "label": "Long Dash?",
-   "name": "long_dash"
+   "locked": false,
+   "name": "long_dash",
+   "required": false,
+   "type": "boolean"
+  },
+  {
+   "type": "boolean",
+   "id": "16544dd8-1cb8-87e5-1d33-7f21b7b3aa26",
+   "default": false,
+   "display": "toggle",
+   "label": "White Text?",
+   "name": "white_text"
   }
  ]

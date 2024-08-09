@@ -1,0 +1,64 @@
+<!--
+  templateType: blog_post
+  isAvailableForNewContent: true
+  label: nQuery Webinar Post 
+-->
+{% extends "../layouts/base.html" %}
+{% boolean "pre_webinar" label='Is Pre Webinar?', value=True, export_to_template_context=True %}
+{% block body %}
+  {# {{widget_data.pre_webinar.value}} #}
+  <section class="py-12 bg-nq-grey-2">
+  <div class="container px-6">
+    <div class="flex flex-wrap -mx-6">
+      <div class="{% if widget_data.pre_webinar.value %} lg:w-1/2 {% else %} lg:w-3/5 {% endif %} px-6">
+        <div class="inline-block uppercase bg-nq-hazel px-2 py-1 text-xs font-semibold text-white mb-3">
+          {% module "hero_label" path="@hubspot/text" value="On-Demand Webinar" %}</div>
+      
+          <div class="hero-title">
+            {% module "blog_header" path="@hubspot/header" value="{{ content.name }}" header_tag="h1" %}
+          </div>
+      </div>
+      <div class="{% if widget_data.pre_webinar.value %} lg:w-1/2 {% else %} lg:w-2/5 {% endif %} px-6">
+        {% form
+          form_to_use="{{ module.form_field.form_id }}"
+          response_response_type="{{ module.form_field.response_type }}"
+          response_message="{{ module.form_field.message }}"
+          response_redirect_id="{{ module.form_field.redirect_id }}"
+          response_redirect_url="{{module.form_field.redirect_url}}"
+          gotowebinar_webinar_key="{{ module.form_field.gotowebinar_webinar_key }}"
+        %}
+      </div>
+    </div>
+  
+  </div>
+  </section>
+<section class="md:pt-12 pb-20 bg-nq-grey-2">
+  <div class="container px-6">
+    <div class="flex flex-wrap">
+      <div class="lg:w-9/12">
+        <div class="blog-post__body prose max-w-full bg-white p-12 rounded-lg" id="post-body">
+          {{ content.post_body }}
+        </div>
+      </div>
+      <div class="lg:w-3/12"></div>
+    </div>
+  
+
+    <div class="py-12">
+{% module "rich_text" path="@hubspot/rich_text" html="<h2 class='text-center'>Browse our Webinars</h2>" %}
+<div class="mt-6">
+{% module "recommended_row" path="/nquery-theme/cli-build/modules/recommended-row" blog_field="2488660125" %}
+</div>
+    </div>
+  </div>
+</section>
+{% endblock body %}
+
+{% require_css %} 
+  <style>
+      .hero-title h1 {
+        font-weight: 300;
+        font-size: 38px;
+      }
+  </style>
+  {% end_require_css %}

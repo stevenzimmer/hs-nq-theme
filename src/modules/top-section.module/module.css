@@ -1,0 +1,10 @@
+.blog-subscribe-form .hs-form-field .input input {
+ border: 1px solid #DBDFD4;
+ border-radius: 12px;
+ margin-right:0;
+  width: 100% !important;
+}
+.hs-error-msgs.inputs-list li {
+  color: red;
+  margin-top: 0;
+}

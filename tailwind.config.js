@@ -25,6 +25,7 @@ module.exports = {
                     primary: "#515C62",
                     jade: "#2EC99B",
                     grey: "#DBDFD4",
+                    "grey-2": "#F3F3EF",
                     pebble: "#907680",
                     hazel: "#BAB78D"
                 },

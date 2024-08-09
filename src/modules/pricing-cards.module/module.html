@@ -1,79 +1,4 @@
 <!-- module html  -->
-{% set pricing_cards = [
-  {
-    "most_popular": false,
-    "title": "Base",
-    "description": "Fixed Term",
-    "academic_price": "720",
-    "corporate_price": "845",
-    "price_description": "per user per year",
-    "plan_description": "Confidently calculate sample size & power for regulatory approval",
-    "plan_bullets": [
-      "1000s of Fixed Term Trial Scenarios",
-      "Endpoints: Including Means, Survival, Agreement, Count, Regression",
-      "Designs: Including Cross-Over, Stepped-Wedge, Cluster Randomized",
-      "Statement Generator",
-      "IQ/OQ Procedures",
-      "Self-serve knowledge base",
-      "24/7 Customer Support"
-    ]
-  },
-  {
-    "most_popular": false,
-    "title": "Plus",
-    "description": "Bayesian + Fixed Term",
-    "academic_price": "1,095",
-    "corporate_price": "1,150",
-    "price_description": "per user per year",
-    "plan_description": "Confidently calculate sample size & power for regulatory approval",
-    "plan_bullets": [
-      "1000s of Fixed Term Trial Scenarios",
-      "Endpoints: Including Means, Survival, Agreement, Count, Regression",
-      "Designs: Including Cross-Over, Stepped-Wedge, Cluster Randomized",
-      "Statement Generator",
-      "IQ/OQ Procedures",
-      "Self-serve knowledge base",
-      "24/7 Customer Support"
-    ]
-  },
-  {
-    "most_popular": true,
-    "title": "Pro",
-    "description": "Adaptive + Bayesian + Fixed Term",
-    "academic_price": "1,995",
-    "corporate_price": "3,625",
-    "price_description": "per user per year",
-    "plan_description": "Confidently calculate sample size & power for regulatory approval",
-    "plan_bullets": [
-      "1000s of Fixed Term Trial Scenarios",
-      "Endpoints: Including Means, Survival, Agreement, Count, Regression",
-      "Designs: Including Cross-Over, Stepped-Wedge, Cluster Randomized",
-      "Statement Generator",
-      "IQ/OQ Procedures",
-      "Self-serve knowledge base",
-      "24/7 Customer Support"
-    ]
-  },
-  {
-    "most_popular": false,
-    "title": "Expert",
-    "description": "Prediction + Adaptive + Bayesian + Fixed Term",
-    "academic_price": "3,495",
-    "corporate_price": "6,995",
-    "price_description": "per user per year",
-    "plan_description": "Confidently calculate sample size & power for regulatory approval",
-    "plan_bullets": [
-      "1000s of Fixed Term Trial Scenarios",
-      "Endpoints: Including Means, Survival, Agreement, Count, Regression",
-      "Designs: Including Cross-Over, Stepped-Wedge, Cluster Randomized",
-      "Statement Generator",
-      "IQ/OQ Procedures",
-      "Self-serve knowledge base",
-      "24/7 Customer Support"
-    ]
-  }
-] %}
-
   <div class="flex items-center justify-center mb-12">
     <div class="font-semibold md:text-lg">
       Academic
@@ -101,10 +26,15 @@
     <div class="container">
       <div class="flex flex-wrap -mx-3">
       {% for card in module.cards %}
-        {% set href = card.button_link.url.href %}
+        {% set commercialHref = card.button_link.url.href %}
           {% if card.button_link.url.type is equalto "EMAIL_ADDRESS" %}
-            {% set href = "mailto:" + href %}
+            {% set commercialHref = "mailto:" + commercialHref %}
           {% endif %}
+
+          {% set academicHref = card.academic_button_link.url.href %}
+            {% if card.academic_button_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set academicHref = "mailto:" + academicHref %}
+            {% endif %}
 
         <div class="w-full sm:w-1/2 lg:w-1/4 px-3 mb-12 lg:mb-0 ">
           
@@ -135,16 +65,28 @@
               </p>
             </div>
             <div class="mb-3">
-              <a class="btn w-full text-center text-white hover:bg-opacity-80 hover:border-opacity-80 
+            <a class="btn w-full text-center academic-price hidden text-white hover:bg-opacity-80 hover:border-opacity-80 
+            {% if card.most_popular %}
+              bg-nq-jade border-nq-jade
+              {% else %}
+                bg-black border-black 
+            {% endif %}" href="{{ academicHref }}"
+          {% if item.academic_button_link.open_in_new_tab %}target="_blank"{% endif %}
+          {% if item.academic_button_link.rel %}rel="{{ item.academic_button_link.rel }}"{% endif %}>
+            Buy Now
+            </a>
+              <a class="btn corporate-price w-full text-center text-white hover:bg-opacity-80 hover:border-opacity-80 
               {% if card.most_popular %}
                 bg-nq-jade border-nq-jade
                 {% else %}
                   bg-black border-black 
-              {% endif %}" href="{{ href }}"
+              {% endif %}" href="{{ commercialHref }}"
             {% if item.button_link.open_in_new_tab %}target="_blank"{% endif %}
             {% if item.button_link.rel %}rel="{{ item.button_link.rel }}"{% endif %}>
               Buy Now
               </a>
+
+             
             </div>
             <div class="plan-description">
               {{ card.plan_description }}

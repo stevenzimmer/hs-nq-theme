@@ -1,122 +1,134 @@
 [
-  {
-   "default": {
-    "size_type": "auto",
-    "src": "https://www.statsols.com/hubfs/card-thumbnail.jpg",
-    "alt": "card-thumbnail",
-    "loading": "lazy",
-    "width": 729,
-    "height": 410,
-    "max_width": 729,
-    "max_height": 410
-   },
-   "display_width": null,
-   "id": "9219c2db-b4bd-eb84-9169-e3d2fc3634f3",
-   "label": "Thumbnail",
-   "locked": false,
-   "name": "card_thumbnail",
-   "required": false,
-   "resizable": true,
-   "responsive": true,
-   "show_loading": false,
-   "type": "image"
-  },
-  {
-   "allow_new_line": false,
-   "default": "Blog",
-   "display_width": null,
-   "id": "76f4cf3e-406c-192b-caf3-2db704c613db",
-   "label": "Label",
-   "locked": false,
-   "name": "card_label",
-   "required": false,
-   "show_emoji_picker": false,
-   "type": "text",
-   "validation_regex": ""
-  },
-  {
-   "allow_new_line": false,
-   "default": "Practical Guide to Sequential Design",
-   "display_width": null,
-   "id": "e9bd78bb-4a8f-d65a-1462-22f06a6ea340",
-   "label": "Title",
-   "locked": false,
-   "name": "card_title",
-   "required": false,
-   "show_emoji_picker": false,
-   "type": "text",
-   "validation_regex": ""
-  },
-  {
-   "type": "text",
-   "id": "d7d4e133-a4f3-f8e6-fc13-f72ba963123c",
-   "validation_regex": "",
-   "label": "Description",
-   "name": "description"
-  },
-  {
-   "children": [
     {
-     "allow_new_line": false,
-     "default": "View Post",
-     "display_width": null,
-     "id": "5962f3f0-392c-1206-de4b-351cd22efdf1",
-     "label": "Button Text",
-     "locked": false,
-     "name": "text",
-     "required": false,
-     "show_emoji_picker": false,
-     "type": "text",
-     "validation_regex": ""
+        "default": {
+            "size_type": "auto",
+            "src": "https://www.statsols.com/hubfs/card-thumbnail.jpg",
+            "alt": "card-thumbnail",
+            "loading": "lazy",
+            "width": 729,
+            "height": 410,
+            "max_width": 729,
+            "max_height": 410
+        },
+        "display_width": null,
+        "id": "9219c2db-b4bd-eb84-9169-e3d2fc3634f3",
+        "label": "Thumbnail",
+        "locked": false,
+        "name": "card_thumbnail",
+        "required": false,
+        "resizable": true,
+        "responsive": true,
+        "show_loading": false,
+        "type": "image"
     },
     {
-     "default": {
-      "url": {
-       "content_id": null,
-       "type": "EXTERNAL",
-       "href": ""
-      },
-      "open_in_new_tab": false,
-      "no_follow": false
-     },
-     "display_width": null,
-     "id": "3cd71135-47d9-1490-669d-2b7d2dedb465",
-     "label": "Link",
-     "locked": false,
-     "name": "link",
-     "required": false,
-     "show_advanced_rel_options": false,
-     "supported_types": [
-      "EXTERNAL",
-      "CONTENT",
-      "FILE",
-      "EMAIL_ADDRESS",
-      "BLOG",
-      "CALL_TO_ACTION"
-     ],
-     "type": "link"
+        "allow_new_line": false,
+        "default": "Blog",
+        "display_width": null,
+        "id": "76f4cf3e-406c-192b-caf3-2db704c613db",
+        "label": "Label",
+        "locked": false,
+        "name": "card_label",
+        "required": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "validation_regex": ""
+    },
+    {
+        "allow_new_line": false,
+        "default": "Practical Guide to Sequential Design",
+        "display_width": null,
+        "id": "e9bd78bb-4a8f-d65a-1462-22f06a6ea340",
+        "label": "Title",
+        "locked": false,
+        "name": "card_title",
+        "required": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "validation_regex": ""
+    },
+    {
+        "allow_new_line": false,
+        "display_width": null,
+        "id": "d7d4e133-a4f3-f8e6-fc13-f72ba963123c",
+        "label": "Description",
+        "locked": false,
+        "name": "description",
+        "required": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "validation_regex": ""
+    },
+    {
+        "type": "text",
+        "id": "0a94a9f9-0eb1-0e14-46a0-8b55a923c2f0",
+        "validation_regex": "",
+        "label": "Wistia ID",
+        "name": "wistia_id"
+    },
+    {
+        "children": [
+            {
+                "allow_new_line": false,
+                "default": "View Post",
+                "display_width": null,
+                "id": "5962f3f0-392c-1206-de4b-351cd22efdf1",
+                "label": "Button Text",
+                "locked": false,
+                "name": "text",
+                "required": false,
+                "show_emoji_picker": false,
+                "type": "text",
+                "validation_regex": ""
+            },
+            {
+                "default": {
+                    "url": {
+                        "content_id": null,
+                        "type": "EXTERNAL",
+                        "href": ""
+                    },
+                    "open_in_new_tab": false,
+                    "no_follow": false
+                },
+                "display_width": null,
+                "id": "3cd71135-47d9-1490-669d-2b7d2dedb465",
+                "label": "Link",
+                "locked": false,
+                "name": "link",
+                "required": false,
+                "show_advanced_rel_options": false,
+                "supported_types": [
+                    "EXTERNAL",
+                    "CONTENT",
+                    "FILE",
+                    "EMAIL_ADDRESS",
+                    "BLOG",
+                    "CALL_TO_ACTION"
+                ],
+                "type": "link"
+            }
+        ],
+        "default": {
+            "text": "View Post",
+            "link": {
+                "url": {
+                    "content_id": null,
+                    "type": "EXTERNAL",
+                    "href": ""
+                },
+                "open_in_new_tab": false,
+                "no_follow": false
+            }
+        },
+        "display_width": null,
+        "expanded": false,
+        "id": "79274e11-41eb-a24e-6519-a6d90fd1bfd2",
+        "label": "Button",
+        "locked": false,
+        "name": "card_cta",
+        "required": false,
+        "tab": "CONTENT",
+        "type": "group"
     }
-   ],
-   "default": {
-    "text": "View Post",
-    "link": {
-     "url": {
-      "content_id": null,
-      "type": "EXTERNAL",
-      "href": ""
-     },
-     "open_in_new_tab": false,
-     "no_follow": false
-    }
-   },
-   "display_width": null,
-   "expanded": false,
-   "id": "79274e11-41eb-a24e-6519-a6d90fd1bfd2",
-   "label": "Button",
-   "locked": false,
-   "name": "card_cta",
-   "required": false,
-   "tab": "CONTENT",
-   "type": "group"
-  }
- ]
+]

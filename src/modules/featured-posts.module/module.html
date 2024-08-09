@@ -1,0 +1,44 @@
+<!-- module html  -->
+{{ require_css("https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css") }}
+{{ require_css("https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css") }}
+{{ require_js("https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js", "footer") }}
+{{ require_js("https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js", "footer") }}
+
+{% set recent_posts = blog_recent_posts( module.blog, 5) %}
+<div class="slick-container mt-2 mb-2 -mx-1">
+{% for fp in recent_posts %}
+
+    <div class="w-full mx-1">
+      <a href="{{fp.absolute_url}}" class="block w-full p-6 border border-nq-jade relative h-full rounded">
+  
+        <div class="relative ">  
+          <p class="text-nq-jade font-semibold mb-2">
+            {{ fp.topic_list[0] }}
+          </p>
+        
+          <h3 class="text-white text-2xl mb-2">
+            {{ fp.name }}
+          </h3>
+          <p class="text-white text-sm">
+            {{ fp.meta_description }}
+          </p>
+            
+        </div>
+      </a>
+    </div>
+ 
+    {% endfor %}
+</div><!--end row-wrapper -->
+
+<div class="flex items-center space-x-3">
+  <div class="prev cursor-pointer">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.5 21L10.5 14L17.5 7" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <div class="next cursor-pointer">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10.5 7L17.5 14L10.5 21" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</div>

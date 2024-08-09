@@ -161,12 +161,28 @@ var tables = [
   },
   {
       Table: 'AOT9',
-      Name: "Test for One Cronbach's Alpha ",
+      Name: "Test for One Cronbach's Alpha",
       Base: true,
       Plus: true,
       Pro: true,
       Expert: true
   },
+  {
+    Table: 'AOT16',
+    Name: "Paired Correlations (No Common Index)*",
+    Base: true,
+    Plus: true,
+    Pro: true,
+    Expert: true
+},
+{
+    Table: 'AOT17',
+    Name: "Test for Two Dependent Pearson Correlations (No Common Index)",
+    Base: true,
+    Plus: true,
+    Pro: true,
+    Expert: true
+},
   {
       Table: 'ATT3',
       Name: 'Test for Two Correlation Coefficients ',
@@ -1567,6 +1583,62 @@ var tables = [
       Pro: true,
       Expert: true
   },
+  {
+    Table: 'MTT50',
+    Name: 'Mixed Models Test for Two Means at the End of Follow-Up in a 2-Level Hierarchical Design (Level 2 Randomization)',
+    Base: true,
+    Plus: true,
+    Pro: true,
+    Expert: true
+},
+{
+    Table: 'MTT51',
+    Name: 'Mixed Models Test for Two Means at the End of Follow-Up in a 3-Level Hierarchical Design (Level 3 Randomization)',
+    Base: true,
+    Plus: true,
+    Pro: true,
+    Expert: true
+},
+{
+    Table: 'MTT53',
+    Name: 'Mixed Models Test for Interaction Effect in 2x2 Factorial Design in a 3-Level Hierarchical Design (Level 3 Randomization)',
+    Base: true,
+    Plus: true,
+    Pro: true,
+    Expert: true
+},
+{
+    Table: 'MTT54',
+    Name: 'Mixed Models Test for Interaction Effect in 2x2 Factorial Design in a 3-Level Hierarchical Design (Level 2 Randomization)',
+    Base: true,
+    Plus: true,
+    Pro: true,
+    Expert: true
+},
+{
+    Table: 'MTT55',
+    Name: 'Mixed Models Test for Interaction Effect in 2x2 Factorial Design in a 2-Level Hierarchical Design (Level 2 Randomization)',
+    Base: true,
+    Plus: true,
+    Pro: true,
+    Expert: true
+},
+{
+    Table: 'MTT56',
+    Name: 'Mixed Models Test for Interaction Effect in 2x2 Factorial Design in a 2-Level Hierarchical Design (Level 1 Randomization)',
+    Base: true,
+    Plus: true,
+    Pro: true,
+    Expert: true
+},
+{
+    Table: 'MTT57',
+    Name: 'Mixed Models Test for Interaction Effect in 2x2 Factorial Design in a 3-Level Hierarchical Design (Level 1 Randomization)',
+    Base: true,
+    Plus: true,
+    Pro: true,
+    Expert: true
+},
   {
       Table: 'MTT6',
       Name: 'Test for Ratio of Two Incidence Rates using Negative Binomial Model ',
@@ -3064,6 +3136,30 @@ var tables = [
       Expert: true
   },
   {
+    Table: 'STT37',
+    Name: 'Log-Rank Test, User-Specified Accrual %, Fixed Follow-up, Piecewise Survival and Dropout Rates.',
+    Base: true,
+    Plus: true,
+    Pro: true,
+    Expert: true
+},
+{
+    Table: 'STT38',
+    Name: 'Log-Rank Test, User-Specified Accrual Rates, Fixed Follow-up, Piecewise Survival and Dropout Rates',
+    Base: true,
+    Plus: true,
+    Pro: true,
+    Expert: true
+},
+{
+    Table: 'MaxCombo/Linear-Rank',
+    Name: 'Modestly Weighted Linear-Rank Test (MLWRT) - Added to:STT33/STT34/STE11/STE12/STE13/STE14',
+    Base: true,
+    Plus: true,
+    Pro: true,
+    Expert: true
+},
+  {
       Table: 'STT3U',
       Name: "Two Sample Log-Rank Test with Specified Rates and Unequal n's using Simulation ",
       Base: true,
@@ -3255,6 +3351,14 @@ var tables = [
       Pro: true,
       Expert: true
   },
+  {
+    Table: 'MOC28',
+    Name: 'Confidence Interval for One Poisson Rate',
+    Base: true,
+    Plus: true,
+    Pro: true,
+    Expert: true
+},
   {
       Table: 'MOC6',
       Name: 'One Sample Bayesian Credible Interval with Known Precision ',
@@ -4079,6 +4183,22 @@ var tables = [
       Pro: true,
       Expert: true
   },
+  {
+    Table: 'GST3',
+    Name: 'Group Sequential Test of Two Survivals',
+    Base: null,
+    Plus: null,
+    Pro: true,
+    Expert: true
+},
+{
+    Table: 'GST Simulation',
+    Name: 'Group Sequential Simulation (Two Means/Two Proportions)',
+    Base: null,
+    Plus: null,
+    Pro: true,
+    Expert: true
+},
   {
       Table: 'Predict',
       Name: 'Pre-trial Prediction of Enrollment Milestones',

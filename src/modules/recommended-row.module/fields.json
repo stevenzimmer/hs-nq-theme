@@ -1,0 +1,83 @@
+[
+  {
+   "display_width": null,
+   "id": "4f99ab1a-7f3b-bc9f-11e1-8d344f8499b7",
+   "label": "Blog",
+   "locked": false,
+   "name": "blog_field",
+   "required": false,
+   "type": "blog"
+  },
+  {
+   "type": "page",
+   "id": "af1f4369-abfa-c930-4e4d-2a61bd52663a",
+   "label": "Posts",
+   "name": "page_posts",
+   "occurrence": {}
+  },
+  {
+   "children": [
+    {
+     "allow_new_line": false,
+     "display_width": null,
+     "id": "862dea0d-56f5-3821-d30b-5b944e441e16",
+     "label": "Title",
+     "locked": false,
+     "name": "title",
+     "required": false,
+     "show_emoji_picker": false,
+     "type": "text",
+     "validation_regex": ""
+    },
+    {
+     "default": {
+      "size_type": "auto",
+      "src": "",
+      "alt": null,
+      "loading": "lazy"
+     },
+     "display_width": null,
+     "id": "9ef79e68-bddc-5749-398c-ff20b5d395b3",
+     "label": "Thumbnail",
+     "locked": false,
+     "name": "thumbnail",
+     "required": false,
+     "resizable": true,
+     "responsive": true,
+     "show_loading": false,
+     "type": "image"
+    },
+    {
+     "allow_new_line": false,
+     "display_width": null,
+     "id": "a1563218-9449-1204-4179-c0f04cbc9626",
+     "label": "Label",
+     "locked": false,
+     "name": "top_label",
+     "required": false,
+     "show_emoji_picker": false,
+     "type": "text",
+     "validation_regex": ""
+    }
+   ],
+   "default": [],
+   "display_width": null,
+   "expanded": false,
+   "group_occurrence_meta": null,
+   "id": "6e48b7a0-18d1-2309-baee-a78aa3e2877f",
+   "label": "Cards",
+   "locked": false,
+   "name": "cards",
+   "occurrence": {
+    "max": 3,
+    "sorting_label_field": "862dea0d-56f5-3821-d30b-5b944e441e16"
+   },
+   "required": false,
+   "tab": "CONTENT",
+   "type": "group",
+   "visibility": {
+    "controlling_field_path": "blog_field",
+    "operator": "EMPTY"
+   }
+  }
+ ]

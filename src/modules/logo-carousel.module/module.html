@@ -1,8 +1,8 @@
 <!-- module html  -->
 {{ require_css("https://unpkg.com/flickity@2/dist/flickity.min.css") }}
-{{ require_js("https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js", "footer") }}
+{{ require_js("https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js") }}
 
-  <div class="carousel-ticker h-[200px] ">
+  <div class="carousel-ticker h-[200px] flex items-center">
     {% for item in module.image_field %}
     {% if item.src %}
       {% set sizeAttrs = 'width="{{ item.width }}" height="{{ item.height }}"' %}

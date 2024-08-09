@@ -1,0 +1,55 @@
+<!--
+  templateType: blog_post
+  isAvailableForNewContent: true
+  label: nQuery Blog Post 
+-->
+{% extends "../layouts/base.html" %}
+{% block body %}
+
+  <section class="py-6 bg-nq-grey">
+  <div class="container px-6">
+    <div class="flex items-center justify-between flex-wrap mb-3">
+      <div class="flex items-center w-full md:w-1/2 mb-6 md:mb-0">
+        <div class="">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 4L6 8L10 12" stroke="#2EC99B" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="px-2">
+          <a class="text-sm" href="{{ group.absolute_url}}">{% module "text" path="@hubspot/text" value="Back to Webinars" %}</a>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2">
+      {% module "narration" path="@hubspot/blog_audio",
+      overrideable=False, styles={ groupColors: { override: 'custom', background: { color: '#907680' }, text: { color: '#ffffff' }, }, } %}
+      </div>
+    </div>
+  <div class="">
+  {% module "blog_header" path="@hubspot/header" value="{{ content.name }}" header_tag="h1" %}
+  </div>
+  </div>
+  </section>
+<section class="md:pt-12 pb-20">
+  <div class="container px-6">
+    
+    <div class="blog-post__body pb-6 prose max-w-full" id="post-body">
+      {{ content.post_body }}
+    </div>
+
+    <div class="border-t py-12">
+{% module "rich_text" path="@hubspot/rich_text" html="<h2 class='text-center'>Recommended Webinars</h2><p class='text-center'>Resources to help optimize your clinical trial design</p>" %}
+<div class="mt-6">
+{% module "recommended_row" path="/nquery-theme/cli-build/modules/recommended-row" blog_field="2488660125" %}
+</div>
+    </div>
+  </div>
+</section>
+{% endblock body %}
+
+{% require_css %} 
+  <style>
+      div.hs-audio-player {
+        z-index: 5;
+      }
+  </style>
+  {% end_require_css %}

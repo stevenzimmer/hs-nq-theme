@@ -45,3 +45,8 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+.btn.academic-price.hidden,
+.btn.corporate-price.hidden {
+  display:none;
+}

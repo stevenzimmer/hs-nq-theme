@@ -1,103 +1,93 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // const headers = Array.prototype.slice.call(document.querySelectorAll('.header-item'));
 
+    const sectionHeaders = Array.prototype.slice.call(
+        document.querySelectorAll(".section-header")
+    );
 
+    // const firstSectionHeader = sectionHeaders[0];
 
-document.addEventListener("DOMContentLoaded", function() 
-{
+    // const lastSectionHeader = sectionHeaders[sectionHeaders.length - 1];
 
-  // const headers = Array.prototype.slice.call(document.querySelectorAll('.header-item'));
+    // const sectionStickyHeader = document.querySelector('.dnd_area-row-1-background-color');
 
-  // const sectionHeaders = Array.prototype.slice.call(document.querySelectorAll('.section-header'));
+    sectionHeaders.forEach((sectionHeader, i) => {
+        sectionHeader.setAttribute("id", "section-" + i);
 
-  // const firstSectionHeader = sectionHeaders[0];
+        //   const waypointDown = new Waypoint({
+        //     element: sectionHeader,
+        //     handler: function(direction) {
 
-  // const lastSectionHeader = sectionHeaders[sectionHeaders.length - 1];
+        //       if (direction === 'down') {
+        //         headers.forEach((header) => {
+        //           header.classList.remove('active');
+        //         });
+        //         headers[i].classList.add('active');
 
-  // const sectionStickyHeader = document.querySelector('.dnd_area-row-1-background-color');
+        //         if( i === sectionHeaders.length - 1 ) {
 
-  // sectionHeaders.forEach( (sectionHeader,i) => {
+        //           sectionStickyHeader.classList.remove('stuck');
+        //           sectionStickyHeader.classList.add('absolute', "w-full", "left-0", "right-0");
 
-  //   sectionHeader.setAttribute("id","section-" + i)
+        //           sectionStickyHeader.style.top = lastSectionHeader.offsetTop - sectionStickyHeader.offsetHeight - lastSectionHeader.offsetHeight - sectionHeader.offsetHeight  + "px";
 
-  //   const waypointDown = new Waypoint({
-  //     element: sectionHeader,
-  //     handler: function(direction) {
-      
-  //       if (direction === 'down') {
-  //         headers.forEach((header) => {
-  //           header.classList.remove('active');
-  //         });
-  //         headers[i].classList.add('active');
+        //         }
+        //       }
+        //     },
+        //     offset: '30%'
+        //   });
 
-  //         if( i === sectionHeaders.length - 1 ) {
+        //   const waypointUp = new Waypoint({
+        //     element: sectionHeader,
+        //     handler: function(direction) {
+        //       if (direction === 'up') {
+        //         headers.forEach((header) => {
+        //           header.classList.remove('active');
+        //         });
 
-  //           sectionStickyHeader.classList.remove('stuck');
-  //           sectionStickyHeader.classList.add('absolute', "w-full", "left-0", "right-0");
+        //         headers[i].classList.add('active');
 
-  //           sectionStickyHeader.style.top = lastSectionHeader.offsetTop - sectionStickyHeader.offsetHeight - lastSectionHeader.offsetHeight - sectionHeader.offsetHeight  + "px";
-            
-  //         }
-  //       }
-  //     },
-  //     offset: '30%'
-  //   });
+        //           sectionStickyHeader.classList.add('stuck');
+        //           sectionStickyHeader.classList.remove('absolute', "w-full", "left-0", "right-0");
 
-  //   const waypointUp = new Waypoint({
-  //     element: sectionHeader,
-  //     handler: function(direction) {
-  //       if (direction === 'up') {
-  //         headers.forEach((header) => {
-  //           header.classList.remove('active');
-  //         });
+        //           sectionStickyHeader.style.top = 0 + "px";
 
-  //         headers[i].classList.add('active');
-        
-  //           sectionStickyHeader.classList.add('stuck');
-  //           sectionStickyHeader.classList.remove('absolute', "w-full", "left-0", "right-0");
-
-  //           sectionStickyHeader.style.top = 0 + "px";
-           
-  //       }
-  //     },
-  //     offset: '20%'
-  //   });
-
-  // });
-
-
-  // const firstSectionWaypoint = new Waypoint({
-  //   element: firstSectionHeader,
-  //   handler: function(direction) {
-  //     if (direction === 'up') {
-  //       headers.forEach((header) => {
-  //         header.classList.remove('active');
-  //       });
-        
-  //       headers[i].classList.add('active');
-  //       sectionStickyHeader.classList.remove('stuck');
-  //       sectionStickyHeader.classList.add("reltative");
-  //       sectionStickyHeader.style.top = 0 + "px";
-         
-  //     }
-  //   },
-  //   offset: '50%'
-  // });
-
-
-  headers.forEach((header, i, all) => {
-    header.addEventListener('click', (e) => {
-
-      console.dir({e});
-
-      all.forEach((header) => {
-        header.classList.remove('active');
-      });
-      e.target.classList.add('active');
+        //       }
+        //     },
+        //     offset: '20%'
+        //   });
     });
-  });
 
-  // const sticky = new Waypoint.Sticky({
-  //   element: $('.dnd_area-row-1-background-color')[0]
-  // });
+    // const firstSectionWaypoint = new Waypoint({
+    //   element: firstSectionHeader,
+    //   handler: function(direction) {
+    //     if (direction === 'up') {
+    //       headers.forEach((header) => {
+    //         header.classList.remove('active');
+    //       });
 
+    //       headers[i].classList.add('active');
+    //       sectionStickyHeader.classList.remove('stuck');
+    //       sectionStickyHeader.classList.add("reltative");
+    //       sectionStickyHeader.style.top = 0 + "px";
 
+    //     }
+    //   },
+    //   offset: '50%'
+    // });
+
+    headers.forEach((header, i, all) => {
+        header.addEventListener("click", (e) => {
+            console.dir({e});
+
+            all.forEach((header) => {
+                header.classList.remove("active");
+            });
+            e.target.classList.add("active");
+        });
+    });
+
+    // const sticky = new Waypoint.Sticky({
+    //   element: $('.dnd_area-row-1-background-color')[0]
+    // });
 });

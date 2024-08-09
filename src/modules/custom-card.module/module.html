@@ -4,9 +4,7 @@
 {% endif %}
 
 <div class="overflow-hidden border border-[#DBDFD4] relative max-w-[380px] mx-auto">
-  <a href="{{ href }}"
-    {% if module.card_cta.link.open_in_new_tab %}target="_blank"{% endif %}
-    {% if module.card_btn.link.rel %}rel="{{ module.card_cta.link.rel }}"{% endif %} class="block group hover:no-underline">
+  <div>
     {% if module.card_thumbnail.src %}
     <div class="md:h-[200px]">
       {% set sizeAttrs = 'width="{{ module.card_thumbnail.width }}" height="{{ module.card_thumbnail.height }}"' %}
@@ -16,10 +14,20 @@
         {% set sizeAttrs = 'width="{{ module.card_thumbnail.max_width }}" height="{{ module.card_thumbnail.max_height }}" style="max-width: 100%; height: auto;"' %}
       {% endif %}
         {% set loadingAttr = module.card_thumbnail.loading != 'disabled' ? 'loading="{{ module.card_thumbnail.loading }}"' : '' %}
+        <a href={{ href}} {% if module.card_cta.link.open_in_new_tab %}target="_blank"{% endif %}
+      {% if module.card_btn.link.rel %}rel="{{ module.card_cta.link.rel }}"{% endif %}>
       <img class="w-full h-full object-cover" src="{{ module.card_thumbnail.src }}" alt="{{ module.card_thumbnail.alt }}" {{ loadingAttr }}>
-    
+    </a>
     </div>
     {% endif %}
+    {% if module.wistia_id %}
+ 
+      <div class="md:h-[200px]">
+      <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+    <span class="wistia_embed wistia_async_{{ module.wistia_id }} popover=true popoverContent=thumbnail object-cover playButton=false" >&nbsp;</span></div></div>
+    </div>
+
+  {% endif %}
     <div class="p-[24px] bg-white relative">
       {% if module.card_label %}
       <div class="mb-3">
@@ -32,13 +40,15 @@
         </p>
       </div>
       {% if module.description %}
-      <div class="mb-3">
+      <div class="">
         <p class="text-sm  text-nq-primary leading-normal max-lines max-lines-2 ">
           {{ module.description }}
         </p>
       </div>
       {% endif %}
-      <div class="flex items-center">
+      {% if href %}
+      <a href={{ href}} {% if module.card_cta.link.open_in_new_tab %}target="_blank"{% endif %}
+    {% if module.card_btn.link.rel %}rel="{{ module.card_cta.link.rel }}"{% endif %} class="flex items-center mt-3 group">
         <div class="">
           <p class="text-sm text-nq-forest font-semibold">{{ module.card_cta.text }}</p>
         </div>
@@ -46,8 +56,13 @@
           <path d="M6.5 4L10.5 8L6.5 12" stroke="#2EC99B" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
           </svg>
         </div>
-      </div>
+      </a>
+      {% endif %}
     
     </div>
-  </a>
+  </div>
 </div>
+{% if module.wistia_id %}
+<script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+
+{% endif %}

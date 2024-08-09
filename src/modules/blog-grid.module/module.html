@@ -1,0 +1,108 @@
+{% import "./../../macros/card.html" as card %}
+{% import "./../../macros/icons.html" as icon %}
+<!-- module html  -->
+{% set recent_posts = blog_recent_posts( module.blog_field, 200) %}
+<div class="grid {% if module.blog_field %} lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5 blog-grid {% else %} resource-grid {% endif %}" >
+  {% if module.blog_field %}
+  {% for fp in recent_posts %}
+    {% set initialPostWords = fp.post_body|escape_html|striptags|wordcount %}
+    {% set calculatedPostWords = (initialPostWords/100) * 100 %}
+    {% set finishedPostWords = calculatedPostWords|divide(250)|round(2) %}
+    {% set number = finishedPostWords|round %}
+
+      {% if loop.first and module.form_field.form_id  %}
+        <div class="bg-white p-6 border border-nq-grey">
+          <h3 class="text-xl mb-3">Improve your trial design. Join our mailing list.</h3>
+          <div class="blog-subscribe-form">
+          {% form
+            form_to_use="{{ module.form_field.form_id }}"
+            response_response_type="{{ module.form_field.response_type }}"
+            response_message="{{ module.form_field.message }}"
+            response_redirect_id="{{ module.form_field.redirect_id }}"
+            response_redirect_url="{{module.form_field.redirect_url}}"
+            gotowebinar_webinar_key="{{ module.form_field.gotowebinar_webinar_key }}"
+          %}
+            </div>
+        </div>
+      {% endif %}
+    <a href="{{ fp.absolute_url }}" class="overflow-hidden border border-[#DBDFD4] relative max-w-[380px] mx-auto bg-white blog-column {% if loop.index > 4 %} hidden {% endif %} block group hover:bg-nq-grey/30">
+
+      
+      <div class="p-[24px] relative">
+      {% if fp.topic_list[0] %}
+        <div class="mb-3">
+          {{card.label(fp.topic_list[0])}}
+        </div>
+      {% endif %}
+        <div class="mb-6">
+          <p class=" font-semibold text-nq-forest max-lines max-lines-2 leading-normal mb-3">
+            {{ fp.name }}
+          </p>
+
+          <p class="max-lines max-lines-2 leading-normal text-sm">
+            {{ fp.meta_description }}
+          </p>
+        </div>
+        {{ icon.arrow_icon()}}
+      
+      </div>
+    </a>
+{% endfor %}
+{% else %}
+  {% for item in module.card %}
+
+    {% set label_name = hubdb_table_row(item.card_categories.resource_type.table_id, item.card_categories.resource_type.id)  %} 
+
+    {% set href = item.link.url.href %}
+      {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+      {% endif %}
+    <div class="resource-column w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-2 mb-2 max-w-[380px] {{item.card_categories.resource_type.table_name}}-{{ item.card_categories.resource_type.id }} {{item.card_categories.trial_design.table_name}}-{{ item.card_categories.trial_design.id }} {{item.card_categories.statistical_area.table_name}}-{{ item.card_categories.statistical_area.id }} {{item.card_categories.therapeutic_areas.table_name}}-{{ item.card_categories.therapeutic_areas.id }} "> 
+      <a {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+        href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+      {% else %}
+        href="{{ href|escape_url }}"
+      {% endif %}
+      {% if item.link.open_in_new_tab %}
+        target="_blank"
+      {% endif %}
+      {% if item.link.rel %}
+        rel="{{ item.link.rel|escape_attr }}"
+      {% endif %} class="overflow-hidden border border-[#DBDFD4] relative  mx-auto bg-white block group hover:bg-nq-grey/30">
+     
+        <div class="p-4 relative">
+        {% if label_name %}
+          <div class="mb-3 ">
+            {{card.label( label_name.name )}}
+          </div>
+        {% endif %}
+          <div class="h-16">
+            <p class="font-semibold text-nq-forest max-lines max-lines-2 text-sm leading-normal">
+            {{ item.title }}
+            </p>
+           
+          </div>
+          <div>
+          {% if item.descriptor  %}
+            <p class="max-lines max-lines-2 leading-normal text-sm mb-6">
+            {{ item.descriptor }}
+            </p>
+          {% endif %}
+          </div>
+          {{ icon.arrow_icon()}}
+        </div>
+      </a>
+    </div>
+  {% endfor %}
+{% endif %}
+</div>
+{% if module.blog_field %}
+<div id="load-more-btn" class="cursor-pointer flex items-center justify-center mt-12">
+<div class="flex items-center ">
+<p>Load More</p>&nbsp;
+<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.5 6L8.5 10L12.5 6" stroke="black" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+</svg>
+</div>
+</div>
+{% endif %}

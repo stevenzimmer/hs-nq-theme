@@ -3,7 +3,7 @@
 {% if module.link.url.type is equalto "EMAIL_ADDRESS" %}
   {% set href = "mailto:" + href %}
 {% endif %}
-<div class="flex {% if module.style.alignment_field.horizontal_align  == "CENTER" %} justify-center {% elif module.style.alignment_field.horizontal_align  == "RIGHT" %} justify-end {% endif %} ">
+<div class="flex not-prose {% if module.style.alignment_field.horizontal_align  == "CENTER" %} justify-center {% elif module.style.alignment_field.horizontal_align  == "RIGHT" %} justify-end {% endif %} ">
   <a href="{{ href }}"
   {% if module.link.open_in_new_tab %}target="_blank"{% endif %}
   {% if module.link.rel %}rel="{{ module.link.rel }}"{% endif %} class="flex items-center group {% if module.reverse_caret %} flex-row-reverse {% endif %}">

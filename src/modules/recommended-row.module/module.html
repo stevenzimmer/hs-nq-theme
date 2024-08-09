@@ -1,0 +1,92 @@
+{% import "./../../macros/icons.html" as icon %}
+{% import "./../../macros/card.html" as card %}
+
+  <!-- module html  -->
+{% set recent_posts = blog_recent_posts(module.blog_field, 3) %}
+
+  <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 blog-grid" >
+
+    {% if module.blog_field %}
+      {% for fp in recent_posts %}
+      
+      <a href="{{ fp.absolute_url }}" class="overflow-hidden block border border-[#DBDFD4] relative max-w-[380px] mx-auto bg-white blog-column ">
+  
+        <div class="md:h-[200px]">
+        {% if fp.featured_image %}
+          <img class="w-full !h-full object-cover" src="{{ fp.featured_image }}" alt="{{ fp.name }} thumbnail image">
+        {% endif %}
+        </div>
+        
+        <div class="p-[24px] relative">
+        {% if fp.topic_list[0] %}
+          <div class="mb-3">
+            {{card.label(fp.topic_list[0])}}
+          </div>
+        {% endif %}
+          <div class="mb-3">
+          {{card.title(fp.name)}}
+
+          </div>
+        </div>
+      </a>
+  {% endfor %}
+
+  {% elif module.page_posts %}
+
+    {% for item in module.page_posts %}
+      {% set post = content_by_id(item) %}
+        {% set topic = topic_cluster_by_content_id(post.id) %}
+
+      <a href="{{ post.absolute_url }}" class="overflow-hidden border border-[#DBDFD4] relative max-w-[380px] mx-auto bg-white  block group hover:bg-nq-grey/30">
+      <div class="p-[24px] relative">
+      {% if topic[0] %}
+        <div class="mb-3">
+          {{card.label(topic[0])}}
+        </div>
+      {% endif %}
+        <div class="mb-6">
+          {{card.title(post.name)}}
+
+          <p class="max-lines max-lines-2 leading-normal text-sm mt-3">
+            {{ post.meta_description }}
+          </p>
+        </div>
+        {{ icon.arrow_icon()}}
+      </div>
+    </a>
+    {% endfor %}
+{% else %}
+
+  {% for item in module.cards %}
+
+    <a href="{{ fp.absolute_url }}" class="overflow-hidden block border border-[#DBDFD4] relative max-w-[380px] mx-auto bg-white blog-column ">
+  
+    <div class="md:h-[200px]">
+
+    {% if item.thumbnail.src %}
+      {% set sizeAttrs = 'width="{{ item.thumbnail.width|escape_attr }}" height="{{ item.thumbnail.height|escape_attr }}"' %}
+      {% if item.thumbnail.size_type == 'auto' %}
+        {% set sizeAttrs = 'width="{{ item.thumbnail.width|escape_attr }}" height="{{ item.thumbnail.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+      {% elif item.thumbnail.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ item.thumbnail.max_width|escape_attr }}" height="{{ item.thumbnail.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+      {% endif %}
+       {% set loadingAttr = item.thumbnail.loading != 'disabled' ? 'loading="{{ item.thumbnail.loading|escape_attr }}"' : '' %}
+      <img class="w-full !h-full object-cover" src="{{ item.thumbnail.src|escape_url }}" alt="{{ item.thumbnail.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+       {% endif %}
+    </div>
+    
+    <div class="p-[24px] relative">
+    {% if item.top_label %}
+      <div class="mb-3">
+      {{card.label(item.top_label )}}
+        
+      </div>
+    {% endif %}
+      <div class="mb-3">
+      {{card.title(item.title)}}
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+{% endif %}
+  </div>

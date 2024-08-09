@@ -1,0 +1,11 @@
+[
+  {
+   "display_width": null,
+   "id": "c255c56c-4da3-10c0-9ba7-bcedc9b8e2a9",
+   "label": "HubDB table",
+   "locked": false,
+   "name": "hubdbtable_field",
+   "required": false,
+   "type": "hubdbtable"
+  }
+ ]

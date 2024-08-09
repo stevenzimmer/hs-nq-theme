@@ -1,6 +1,8 @@
 <!-- module html  -->
 <div class="relative">
-<p class="text-[16px]">
+<p class="text-[16px] {% if module.white_text %}
+  text-white
+{% endif %}">
 {{ module.text }}</p>
 <div class="absolute -left-2 md:-left-4 top-0 bottom-0 h-full w-[24px] {% if module.long_dash %}
   md:w-[88px]

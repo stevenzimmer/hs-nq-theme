@@ -1,0 +1,18 @@
+<!-- module html  -->
+{{ require_js("https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js", "head") }}
+{% set resource_filter_rows = hubdb_table_rows(module.hubdbtable_field) %}
+  {% set resource_filter_table = hubdb_table(module.hubdbtable_field) %}
+  {% set currentURL = content.absolute_url|regex_replace('^(http|https):', '') %}
+
+  <form class="blog-tag-filter">
+    <label for="tag-select" class="show-for-sr">{{ resource_filter_table.label }} dropdown filter</label>
+
+    <select name="tag-select" class="border border-nq-grey rounded-md bg-white px-3 py-3 filter-select " >
+      <option value="">{{ resource_filter_table.label }}</option>
+      {% for item in resource_filter_rows %}
+   
+        <option value="{{ resource_filter_table.name}}-{{ item.hs_id }}">{{ item.name }}</option>
+      {% endfor %}
+
+    </select>
+  </form>

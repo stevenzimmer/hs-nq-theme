@@ -1,0 +1,29 @@
+<!--
+    templateType: blog_listing
+    isAvailableForNewContent: true
+    label: nQuery Webinar Listing
+-->
+{% extends "../layouts/base.html" %}
+
+{% block body %}
+
+
+      {% dnd_area "dnd_area" class='webinars-header', label='Webinars Header' %}
+
+
+      {% end_dnd_area %}
+{% endblock body %}
+
+{% require_css %} 
+<style>
+    .hs-search-field__button { display: none;}
+    .hs-search-field__suggestions {
+        z-index: 10;
+    }
+    .hs-search-field__input {
+        border: 1px solid #DBDFD4;
+        border-radius: 4px;
+        padding: .7rem !important;
+    }
+</style>
+{% end_require_css %}
